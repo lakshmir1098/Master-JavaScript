@@ -1,9 +1,14 @@
+body{
+    font-family: Georgia ;
+    line-height: 1em;
+    color: black;
+}
 body .heading5 {
     color: #1442cc;
     font-size: 0.90em;
     font-weight: bold;
-    margin: 0 0 1em 0;
-   margin-block: 0 0;
+    margin: 0 0 10em 0;
+    margin-block: 0 0;
 }
 
 span{
@@ -12,15 +17,17 @@ span{
 
 pre{
     margin: 1px 0 1px 0;
-}
-
-.code{
-    font-family: monospace;
-    padding: 0em;
-    margin: 0em;
-    color: gray;
+    font-family: garamond;
 }
 
 .sub-head{
     font-weight: bold;
+}
+
+.code{
+    font-family: 'Monaco', monospace;
+    font-size: 13px;
+    color: rgb(98, 110, 240);
+    border: 1px groove black;
+    border-radius: 10px ;
 }

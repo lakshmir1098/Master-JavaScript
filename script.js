@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     function tcandtc (){
-        var tcandtc = `Number to String ==> String(23)
+        var tcandtc = `
+    Number to String ==> String(23)
     String to Number ==> Number(23)
     Like this we can use the into datatype(variable) to do type conversion.
 
@@ -13,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function torf(){
-        var torf = `there are only 6 falsy values in JS. They are: 
+        var torf = `
+    There are only 6 falsy values in JS. They are: 
         * 0
         * empty string ' '
         * undefined

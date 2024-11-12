@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 <span class="sub-head">Function expression</span>
     <div class="code"> 
-    var calc = function (year){ //ananonymous fucntion - a fn without a name 
+    var calc = function (year){ 
+    //ananonymous fucntion - a fn without a name 
         return 2024 - year;
     }
     console.log(calc(1998));

@@ -1,3 +1,6 @@
+h6 span{
+    font-weight: lighter;
+}
 body{
     font-family: Georgia ;
     line-height: 1em;
@@ -11,17 +14,29 @@ body .heading5 {
     margin-block: 0 0;
 }
 
-span{
-    margin: 0;
-}
-
 pre{
     margin: 1px 0 1px 0;
     font-family: garamond;
 }
 
 .sub-head{
-    font-weight: bold;
+    font-weight: bolder;
+    margin: -20px 0 -5px 0;
+}
+.sub-sub-head{
+    font-style: italic;
+    font-weight: normal;
+}
+
+ul{
+    line-height: 55%;
+}
+
+li{
+    padding: 0;
+    border-spacing:compact;
+    line-height: 0;
+    margin: 10px 0 -5px 0;
 }
 
 .code{
@@ -30,4 +45,5 @@ pre{
     color: rgb(98, 110, 240);
     border: 1px groove black;
     border-radius: 10px ;
+    line-height: 130%;
 }

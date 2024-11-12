@@ -21,7 +21,10 @@ pre{
 
 .sub-head{
     font-weight: bolder;
-    margin: -20px 0 -5px 0;
+    font-style: italic;
+    font-size: larger;
+    margin: -20px 0 -100px 0;
+    padding: -20px 0 -30px 0;
 }
 .sub-sub-head{
     font-style: italic;
@@ -46,4 +49,8 @@ li{
     border: 1px groove black;
     border-radius: 10px ;
     line-height: 130%;
+}
+
+.example {
+    text-decoration: underline;
 }

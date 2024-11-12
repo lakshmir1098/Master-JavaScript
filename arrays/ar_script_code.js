@@ -31,8 +31,8 @@ console.log(friends); // returns array
 
 
 console.log(friends.indexOf('c'));
-
 console.log(friends.includes('d'));
-
 console.log(friends.includes('f'));
+
+
 

@@ -1,14 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     var arrays = 
 `
-<span class = "sub-head"> Ways of working with Array in JS </span>
-<ul><li class = "sub-sub-head">creating Array </li>
+Declaring an array / Creating an empty array 
+    <div class = "code" >
+    var age =[];
+    </div>
+creating Array 
     <div class="code">
     years = Array(1998, 1999,2010, 2020,2024);
     console.log(years);
     console.log(years.length);
     </div>
-<li class = "sub-sub-head">replacing elements </li>
+
+<span class = "sub-head"> Ways of working with Array in JS </span>
+<ul><li class = "sub-sub-head">replacing elements </li>
     <div class= "code">
     years[2] = 2030;
     console.log(years);

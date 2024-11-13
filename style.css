@@ -5,6 +5,7 @@ body{
     font-family: Georgia ;
     line-height: 1em;
     color: black;
+    margin: 20px;
 }
 body .heading5 {
     color: #1442cc;
@@ -12,6 +13,10 @@ body .heading5 {
     font-weight: bold;
     margin: 0 0 10em 0;
     margin-block: 0 0;
+}
+
+body .code{
+    margin-right: 300px;
 }
 
 pre{
@@ -43,9 +48,11 @@ li{
 }
 
 .code{
-    font-family: 'Monaco', monospace;
+    font-family: 'Monaco',;
+    letter-spacing: 1px;
     font-size: 13px;
-    color: rgb(98, 110, 240);
+    font-weight: bold;
+    color: rgb(164, 68, 238);
     border: 1px groove black;
     border-radius: 10px ;
     line-height: 130%;

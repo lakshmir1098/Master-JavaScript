@@ -33,7 +33,7 @@ variable name as key of an object aand thus results in 'undefined'. Here we have
 
 <span class="sub-sub-head">Example</span>
     <div class="code"> 
-    const what_you_need_about_me = prompt('hey, what you want to knwo bout lakshmi - firstName. lastName, occupation,hobbies ?');
+    const what_you_need_about_me = prompt('hey, what you want to know about me - firstName. lastName, occupation,hobbies ?');
     console.log(lak.what_you_need_about_me); //return undefined
     console.log(lak[what_you_need_about_me]); 
     //return the value for the key enter by the user in the prompt 

@@ -33,17 +33,15 @@ pre{
 }
 .sub-sub-head{
     font-style: italic;
-    font-weight: normal;
 }
 
 ul{
-    line-height: 55%;
+    line-height: 5%;
 }
 
 li{
     padding: 0;
-    border-spacing:compact;
-    line-height: 0;
+    line-height: 1;
     margin: 10px 0 -5px 0;
 }
 
@@ -60,4 +58,10 @@ li{
 
 .example {
     text-decoration: underline;
+}
+
+.code-word{
+    font-family: 'Monaco',;
+    letter-spacing: 1px;
+    font-style: italic;
 }

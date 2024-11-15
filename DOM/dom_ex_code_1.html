@@ -1,0 +1,30 @@
+<!-- Example 1-->
+<html>
+<p id="myP">   This element has extra spacing   and contains <span>a span element</span>.</p>
+
+<button onclick="getinnerHTML()">Get innerHTML</button>
+<button onclick="getinnerText()">Get innerText</button>
+<button onclick="gettextContent()">Get textContent</button>
+<pre id="demo"></pre>
+</html>
+
+
+<script>
+function getinnerText() {
+  let text = document.getElementById("myP").innerText;
+  document.getElementById("demo").innerText = text;
+}
+
+function getinnerHTML() {
+  let text = document.getElementById("myP").innerHTML;
+  document.getElementById("demo").innerText = text;
+}
+
+function gettextContent() {
+  let text = document.getElementById("myP").textContent;
+  document.getElementById("demo").textContent = text;
+}
+
+</script>
+
+

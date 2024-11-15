@@ -29,7 +29,7 @@ Objects are in key-value pairs.
     </div>
 
 <span>Other  case scenario is, if the key of an object is given via another variable from user, then dot notation cannot find that 
-variable name as key of an object aand thus results in 'undefined'. Here we have to use bracket-notation. </span>
+variable name as key of an object and thus results in <span class = "code-word">undefined</span>. Here we have to use bracket-notation. </span>
 
 <span class="sub-sub-head">Example</span>
     <div class="code"> 

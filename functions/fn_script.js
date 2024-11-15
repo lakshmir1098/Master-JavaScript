@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 The difference between function delaration and function expression way of calling the function is, 
 we can call the function before defining it, in the function definition way but not in function expresion. 
-Doing so in finction expression will "Cannot access before intialization" error.
+Doing so in finction expression will <span class = "code-word">"Cannot access before intialization"</span> error.
 
 <span class = "sub-head"> Arrow Function </span>
     <div class = "code">
@@ -40,7 +40,7 @@ Doing so in finction expression will "Cannot access before intialization" error.
     </div>
 Arrow function doesn't need code block{} and no return statement as it is implicitily done. 
 The above is applicable only for simple problems.
-lets say we have to find yearsUntilRetirement then 1st we have to find age and then retirement_age - age. 
+lets say we have to find <span class = "code-word">yearsUntilRetirement</span> then 1st we have to find age and then <span class = "code-word">retirement_age - age</span>. 
 In this case we have to use {} and return statement even if it is arrow function
 
     <div class = "code">

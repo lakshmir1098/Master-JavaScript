@@ -4,19 +4,17 @@ h6 span{
 body{
     font-family: Georgia ;
     line-height: 1em;
-    color: black;
-    margin: 20px;
+    color: rgb(247, 241, 241);
+    margin: 10px 5px 5px 20px;
+    background-color: black;
 }
+
 body .heading5 {
-    color: #1442cc;
+    color: #88a0e8;
     font-size: 0.90em;
     font-weight: bold;
     margin: 0 0 10em 0;
     margin-block: 0 0;
-}
-
-body .code{
-    margin-right: 300px;
 }
 
 pre{
@@ -50,10 +48,13 @@ li{
     letter-spacing: 1px;
     font-size: 13px;
     font-weight: bold;
-    color: #630ea4;
-    border: 1px groove black;
+    color: #bc73f4;
+    border: 1px groove rgb(222, 212, 212);
     border-radius: 10px ;
     line-height: 130%;
+    display: flex;
+    align-items: center;
+    overflow: scroll;
 }
 
 .example {

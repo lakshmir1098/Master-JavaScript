@@ -1,0 +1,66 @@
+<html>
+    <body>
+        <input type = "number" class="guess"/>
+        
+        <div>
+            <button class="click_btn">click</button>
+        </div>
+
+        <p id="result"></p>
+    </body>
+
+</html>
+
+<style>
+    body{
+        background: rgb(238,174,202);
+        background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+       
+    }
+
+    .guess{
+        border-width: 3px ;
+        margin: 30px;
+        border-radius: 10px;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div{
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button{
+        padding: 3px 10px;
+        border-width: 5px black;
+
+    }
+
+    #result{
+        border-style: dashed;
+        border-color: black;
+        margin: 30px ;
+        border-radius: 10px;
+        padding: 20px;
+        width: 100px;
+    }
+
+</style>
+
+<script>
+    
+    document.querySelector('.click_btn').addEventListener(
+        'click',function() {
+            // even though the input type is number, the input from user is always of type string 
+            console.log(document.querySelector('.guess').value);
+            const number_typed = Number (document.querySelector('.guess').value); // converting into number 
+            console.log(typeof number_typed); // OUTPUT -> string, number
+            document.getElementById('result').innerText = number_typed;
+        }
+    )
+
+
+</script>

@@ -1,0 +1,31 @@
+<html>
+    <body>
+    Click ESC to see a change
+    </body>
+</html>
+
+<style>
+    body{
+        background: rgb(238,174,202);
+        background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    }
+
+    .change{
+        background: rgb(174,217,238);
+        background: linear-gradient(90deg, rgba(174,217,238,1) 0%, rgba(187,233,148,1) 100%);
+    }
+</style>
+
+<script>
+    const body = document.querySelector('body');
+    function changeBg(){
+        body.classList.add('change');
+    }
+
+    document.addEventListener('keydown', function(e){
+        console.log(e);
+        if(e.key === 'Escape'){
+            changeBg();
+        }
+    })
+</script>

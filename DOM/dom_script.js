@@ -13,18 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
         <a>Contact</a>
         <a style="display: none">Pricing</a>
     </nav>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    
     const innerHTML_output =` 
     <a>Home</a>
     <a>About</a>
     <a>Contact</a>
     <a style="display: none">Pricing</a>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    
     const innerText_output = `
      Home About Contact`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const textContent_output = `
+    
+     const textContent_output = `
     Home
     About
     Contact
     Pricing`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    
     const input_value_code = `
         <input type="text" id="myInput" value="Hello, World!">
         
@@ -36,6 +40,100 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('myInput').value = "New Value";
         //OUTPUT "New Value"
         `.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/`/g, " ");
+    
+        const click_event_code =`  
+    <input type = "number" class="guess"/>
+    <button class="click_btn">click</button>
+    <p id="result"></p>
+    
+    document.querySelector('.click_btn').addEventListener(
+    'click',function() {
+        // even though the input type is number, the input from user is always of type string 
+        console.log(document.querySelector('.guess').value);
+        const number_typed = Number (document.querySelector('.guess').value); // converting into number 
+        console.log(typeof number_typed); // OUTPUT -> string, number
+        document.getElementById('result').innerText = number_typed;
+    })
+        `.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+    const hide_elem =`
+    <html>
+        <div class="block "> </div>
+        <button class = "btn-hide"> Click to hide</button>
+    </html>
+
+    <style>
+    .block {
+        width: 300px;         
+        height: 200px;       
+        background-color: #eb1a1a;  
+        border: 2px solid #000;     
+        padding: 20px;              
+        margin: 50px auto;          
+        display: flex;              
+        justify-content: center;    
+        align-items: center; 
+    }       
+
+    .hide{
+        display: none;
+    }
+
+    .btn-hide{
+        align-items: center;
+        justify-content: center;
+        padding: 10px;              
+        margin: 50px auto; 
+        display: flex; 
+    }
+
+    </style>
+
+    <script>
+        const block = document.querySelector('.block');
+        const btn_hide = document.querySelector('.btn-hide');
+
+        document.querySelector('.btn-hide').addEventListener(
+            'click',function() {
+            block.classList.add('hide');
+            console.log("Block is hidden");
+        })
+        
+    </script>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+    const key_press = `
+    <html>
+        <body>
+        Click ESC to see a change
+        </body>
+    </html>
+
+    <style>
+        body{
+            background: rgb(238,174,202);
+            background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        }
+
+        .change{
+            background: rgb(174,217,238);
+            background: linear-gradient(90deg, rgba(174,217,238,1) 0%, rgba(187,233,148,1) 100%);
+        }
+    </style>
+
+    <script>
+        const body = document.querySelector('body');
+        function changeBg(){
+            body.classList.add('change');
+        }
+
+        document.addEventListener('keydown', function(e){
+            console.log(e);
+            if(e.key === 'Escape'){
+                changeBg();
+            }
+        })
+    </script>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
 
     var dom =`<ul><li> DOM is the complete representation of the HTML file so that we can manipulate it later.</li>
     <li> The DOM Methods and Properties for DOM Manipulation such as "document.querySelector()" are not part of JavaScript.</li>
@@ -72,6 +170,7 @@ Attackers can use the HTML \`${scriptTag}\` tag to insert and run malicious code
 </ul>
 </ul>
 Let us see how the below code is rendered when used with innerHTML,textContent,innerText
+
 <div class="code">\`${code_1}\`
 
     const navElement1 = document.querySelector('nav')
@@ -90,8 +189,40 @@ Let us see how the below code is rendered when used with innerHTML,textContent,i
 Example for input.value
 <div class= "code">\`${input_value_code}\`
 </div>
-NOTE: Executable code is attached as HTML files for practical visual.
+   
+<span class=sub-head>Click Event </span>
+
+    Event Listener in JavaScript is used to listen to any mouse or keyboard clicks or other operations
+    like hover happend over an HTML element.
+
+<div class="code"> \`${click_event_code}\`
+</div>
+
+<span class=sub-head>Capturing Key press event </span>
+
+    Pressing the key in the keyboard can be captured by <span class= "code-word">addEventListener</span> method followed by 
+    <span class= "code-word"> Keydown, keypress, keyup </span> to indicate when the function should be called
     
+    <span class= "code-word"> Keydown </span> -  when the key is still being pressed and key is down
+    <span class= "code-word"> Keypress </span> -  fired when we continously press the key
+    <span class= "code-word"> Keyup </span> -  when key is pressed and finger is off the keyboard  
+
+    <span class= "code-word">addEventListener</span>  we have used so far is only used to listen to the event. 
+    We never look at the even object that JS generates when an event happens.
+    This object is called <span class= "code-word"><b>keyboardEvent</b></span>.This object has a key param which say which key is pressed.
+
+
+<div class="code"> \`${key_press}\`
+</div>
+
+<span class=sub-head>Hiding DOM element using class </span>
+    
+    Here we hide HTML element using a class from css. CSS class will be applied to HTML by JS on click of the button.
+
+<div class="code"> \`${hide_elem}\`
+</div>
+
+<b>NOTE:</b> Executable code is attached as HTML files for practical visual.
 `
    document.getElementById("dom").innerHTML = dom;
 })

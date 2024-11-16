@@ -1,0 +1,44 @@
+<html>
+    <div class="block "> </div>
+    <button class = "btn-hide"> Click to hide</button>
+</html>
+
+<style>
+.block {
+    width: 300px;         
+    height: 200px;       
+    background-color: #eb1a1a;  
+    border: 2px solid #000;     
+    padding: 20px;              
+    margin: 50px auto;          
+    display: flex;              
+    justify-content: center;    
+    align-items: center; 
+}       
+
+.hide{
+    display: none;
+}
+
+.btn-hide{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;              
+    margin: 50px auto; 
+    display: flex; 
+}
+
+</style>
+
+<script>
+    const block = document.querySelector('.block');
+    const btn_hide = document.querySelector('.btn-hide');
+
+    document.querySelector('.btn-hide').addEventListener(
+        'click',function() {
+        block.classList.add('hide');
+        btn_hide.textContent = 'hidden'
+        console.log("Block is hidden");
+    })
+    
+</script>

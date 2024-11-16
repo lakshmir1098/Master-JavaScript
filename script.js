@@ -1,3 +1,4 @@
+'use strict';
 document.addEventListener('DOMContentLoaded', function() {
     function tcandtc (){
         var tcandtc = `
@@ -28,6 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("torf").innerHTML =  torf;
     }
 
+    function math_methods(){
+        var math_methods = `<ul><li><b>Math.random()</b> -> generates decimal number between 0 and 1.</li>
+    <li><b>Math.random() * 20 </b>-> generates decimal number between 0 and 19.999 </li>
+    <li><b>Math.trunc(Math.random()*20) </b> -> cuts the decimal and rounds the number between 0 and 19 </li>
+    <li><b>Math.trunc(Math.random()*20) + 1 </b>-> generates whole number between 1 and 20 </li></ul>`
+        document.getElementById("math_methods").innerHTML =  math_methods;
+
+    }
+
     tcandtc();
     torf();
+    math_methods();
 })

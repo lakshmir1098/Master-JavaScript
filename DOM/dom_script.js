@@ -59,10 +59,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const hide_elem =`
     <html>
         <div class="block "> </div>
-        <button class = "btn-hide"> Click to hide</button>
+        <button class = "btn-hide">Click to hide</button>
     </html>
 
     <style>
+    .change1{   
+        background: rgb(238,174,202);
+        background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        
+    }
+
+    .change2{
+        background: rgb(174,217,238);
+        background: linear-gradient(90deg, rgba(174,217,238,1) 0%, rgba(187,233,148,1) 100%);
+    }
+
     .block {
         width: 300px;         
         height: 200px;       
@@ -91,13 +102,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <script>
         const block = document.querySelector('.block');
+        const body = document.querySelector('body');
         const btn_hide = document.querySelector('.btn-hide');
 
-        document.querySelector('.btn-hide').addEventListener(
-            'click',function() {
-            block.classList.add('hide');
-            console.log("Block is hidden");
-        })
+        
+            document.querySelector('.btn-hide').addEventListener(
+                'click',function() {
+                    if(btn_hide.innerText === 'Click to show'){
+                    block.classList.remove('hide');
+                    body.classList.add('change2');
+                    btn_hide.textContent = 'Click to Hide';
+                    console.log("Block is shown");
+                }
+                else{
+                    block.classList.add('hide');
+                    body.classList.add('change1');
+                    btn_hide.textContent = 'Click to show';
+                    console.log("Block is hidden");
+                }
+            })
         
     </script>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
@@ -131,6 +154,17 @@ document.addEventListener('DOMContentLoaded', function() {
             if(e.key === 'Escape'){
                 changeBg();
             }
+            else{
+                reverseBg();
+            }
+
+        //We can use toggle here
+            //if(/[0-9]/.test(e.key)){  //using regex
+            //or
+            if(e.keyCode >= 48 && e.keyCode <= 57){ //using object property
+                body.classList.toggle('change');
+            }
+
         })
     </script>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
@@ -198,6 +232,15 @@ Example for input.value
 <div class="code"> \`${click_event_code}\`
 </div>
 
+<span class=sub-head>Hiding DOM element using class </span>
+    
+    Here we hide HTML element using a class from css. CSS class will be applied to HTML by JS on click of the button.
+    classList has - add, remove, contains, toggle proper
+
+<div class="code"> \`${hide_elem}\`
+</div>
+
+
 <span class=sub-head>Capturing Key press event </span>
 
     Pressing the key in the keyboard can be captured by <span class= "code-word">addEventListener</span> method followed by 
@@ -213,13 +256,6 @@ Example for input.value
 
 
 <div class="code"> \`${key_press}\`
-</div>
-
-<span class=sub-head>Hiding DOM element using class </span>
-    
-    Here we hide HTML element using a class from css. CSS class will be applied to HTML by JS on click of the button.
-
-<div class="code"> \`${hide_elem}\`
 </div>
 
 <b>NOTE:</b> Executable code is attached as HTML files for practical visual.

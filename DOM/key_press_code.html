@@ -22,10 +22,24 @@
         body.classList.add('change');
     }
 
+    function reverseBg(){
+        body.classList.remove('change');
+    }
+
     document.addEventListener('keydown', function(e){
         console.log(e);
         if(e.key === 'Escape'){
             changeBg();
+        }
+        else{
+            reverseBg();
+        }
+
+    //We can use toggle here
+        //if(/[0-9]/.test(e.key)){  //using regex
+        //or
+        if(e.keyCode >= 48 && e.keyCode <= 57){ //using object property
+            body.classList.toggle('change');
         }
     })
 </script>

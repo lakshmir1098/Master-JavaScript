@@ -47,6 +47,7 @@ li{
     font-family: 'Monaco',;
     letter-spacing: 1px;
     font-size: 13px;
+    padding: 5px;
     font-weight: bold;
     color: #bc73f4;
     border: 1px groove rgb(222, 212, 212);
@@ -55,6 +56,7 @@ li{
     display: flex;
     align-items: center;
     overflow: scroll;
+    scrollbar-width:none;
 }
 
 .example {

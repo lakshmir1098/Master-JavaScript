@@ -38,10 +38,12 @@ Doing so in finction expression will <span class = "code-word">"Cannot access be
     var age = byear => 2024 - byear;
     console.log(age(1998));
     </div>
-Arrow function doesn't need code block{} and no return statement as it is implicitily done. 
-The above is applicable only for simple problems.
+Arrow function doesn't need code block{} and no return statement(for one line code) as it is implicitily done. 
 lets say we have to find <span class = "code-word">yearsUntilRetirement</span> then 1st we have to find age and then <span class = "code-word">retirement_age - age</span>. 
 In this case we have to use {} and return statement even if it is arrow function
+
+Unlike regular function, Arrow functions doesnot have its own <span class="code-word">this</span> keyword. 
+Meaning if,<span class="code-word"> this</span> keyword is used in arrow function it actually inherits the parent object - either an function inside which it is used or global <span class="code-word">DOM window</span> object.
 
     <div class = "code">
     var yearsUntilRetirement = byear => {

@@ -35,4 +35,30 @@ console.log(friends.includes('d'));
 console.log(friends.includes('f'));
 
 
+const arr = [3,4,5,6,7];
+        let [x, y,p,q,r] = arr;
+        [x,y,p,q,r] = [r,q,p,y,x];
+        console.log(x,y,p,q,r) // 4 3
+
+const nested = [21,54, [86,98]];
+const[i, , [j,]] = nested;
+console.log(i, j);
+
+const arr1=[7,8,9];
+const newarr = [4,5,6, ...arr1];
+//see the diiference
+console.log(newarr);
+console.log(...newarr);
+const arr2 = [1,2,3];
+console.log(...arr1,...arr2);
+
+const names = 'Lakshmi';
+console.log([...names]);
+console.log(...names);
+console.log([...names, '.','R']);
+
+
+const [a,b,...c] = [1,2,3,4,5,6,7];
+console.log(a,b,c); //1 2 [ 3, 4, 5, 6, 7 ]
+
 

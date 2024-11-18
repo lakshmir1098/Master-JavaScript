@@ -9,7 +9,7 @@ console.log (lak.firstName);
 console.log(lak['occupation']);
 
 const name_calling = 'Name';
-//console.log(lak['first' + name_calling]);
+console.log(lak['first' + name_calling]);
 
 // const what_you_need_about_me = prompt('hey, what you want to knwo bout lakshmi - firstName. lastName, occupation,hobbies ?');
 // console.log(lak.what_you_need_about_me); //return undefined
@@ -38,6 +38,7 @@ var  about_me = {
     location: 'TamilNadu',
     mail_id: 'lakshmichandran1010@gmail.com',
     age : function() { return 2024 - this.birthYear},
+    age2 : () => 2024 - this.birthYear,
   }
 console.log("a",about_me.age(lak['birthYear'])); //works
 console.log("b",about_me.age(lak.birthYear)); // works
@@ -45,6 +46,11 @@ console.log("c",about_me.age(1998)); //works
 console.log("d",about_me['age'](lak.birthYear)); //works 
 console.log("e",about_me.age()); //works
 
+console.log("a",about_me.age2(lak['birthYear'])); //not works
+console.log("b",about_me.age2(lak.birthYear)); // not works
+console.log("c",about_me.age2(1998)); //not works
+console.log("d",about_me['age2'](lak.birthYear)); //not works 
+console.log("e",about_me.age2()); //not works
 
 var  about_me_2 = {
     firstName: 'Lakshmi',
@@ -59,5 +65,20 @@ var  about_me_2 = {
         return this.age;
     },
   };
-console.log("age:" , about_me_2.calAge);
+console.log("age:" , about_me_2.calAge());
+console.log("about_me_2: ",about_me_2);
+
+console.log(about_me_2.age); // work
+
+const { 
+  firstName:my_name, 
+  mail_id:mail = ' ', //setting default if not present
+  fav_food = [],
+
+} = about_me_2;
+console.log(my_name, mail);
+
+const new_me = {...about_me_2,Profession:'developer'}; 
+
+console.log(new_me);
 

@@ -3,7 +3,7 @@ var objects =
 `
 Objects are in key-value pairs.
 
-<span class="sub-sub-head">Example</span>
+<span class="sub-sub-head">&#128640; Example</span>
     <div class = "code">
     var lak ={
         firstName : "Lakshmi",
@@ -21,7 +21,7 @@ Objects are in key-value pairs.
     </div>
 <span>The difference between dot and bracket notation is, in bracket notation we can use expression.</spN>
 
-<span class="sub-sub-head">Example</span>
+<span class="sub-sub-head">&#128640; Example</span>
     <div class="code"> 
     const name_calling = 'Name';
     console.log(lak['first' + name_calling]);
@@ -31,7 +31,7 @@ Objects are in key-value pairs.
 <span>Other  case scenario is, if the key of an object is given via another variable from user, then dot notation cannot find that 
 variable name as key of an object and thus results in <span class = "code-word">undefined</span>. Here we have to use bracket-notation. </span>
 
-<span class="sub-sub-head">Example</span>
+<span class="sub-sub-head">&#128640; Example</span>
     <div class="code"> 
     const what_you_need_about_me = prompt('hey, what you want to know about me - firstName. lastName, occupation,hobbies ?');
     console.log(lak.what_you_need_about_me); //return undefined
@@ -89,8 +89,24 @@ variable name as key of an object and thus results in <span class = "code-word">
     console.log("d",about_me['age'](lak.birthYear)); //works 
     console.log("e",about_me.age()); //works
     </div>
+
+<span class = "sub-head"> Destructuring object </span>
+    <div class = 'code'>
+        const { 
+            firstName:my_name, 
+            mail_id:mail = ' ', //setting default if not present
+            fav_food = [],
+        } = about_me_2;
+        console.log(my_name, mail);
+    </div>
+
+<span class = "sub-head"> Spread Operator </span>
+    <div class = 'code'>
+        const new_me = {...about_me_2,Profession:'developer'};
+        console.log(new_me);
+    </div>
+
+
 `
-
-
 document.getElementById("objects").innerHTML = objects;
 })

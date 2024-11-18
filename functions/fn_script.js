@@ -67,6 +67,24 @@ Meaning if,<span class="code-word"> this</span> keyword is used in arrow functio
     }
     console.log(fruitProcess(2, 3)); 
     </div>
+
+<span class = "sub-head">REST Operator in functions</span>
+    <div class = 'code'>
+    const add = function(...num){
+    let sum = 0;
+    for(let i in num){
+        sum = sum + num[i];
+    }
+    console.log(sum);
+    }
+
+    const x = [3,5,6]
+    add(2,3); // 5
+    add(5,6,7,7); //25
+    add(765,4444,666,33,2,1,4,9); //5924
+    add(...x); //14
+    </div>
+
 `
 
 document.getElementById("functions").innerHTML = logfun;

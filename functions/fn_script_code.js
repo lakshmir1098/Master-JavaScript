@@ -50,3 +50,18 @@ function fruitProcess(a,b){
         }
 
 console.log(fruitProcess(2, 3)); 
+
+
+const add = function(...num){
+    let sum = 0;
+ for(const i of num){
+    sum = sum + i;
+ }
+ console.log(sum);
+}
+
+const x = [3,5,6];
+add(2,3);
+add(5,6,7,7);
+add(765,4444,666,33,2,1,4,9);
+add(...x);

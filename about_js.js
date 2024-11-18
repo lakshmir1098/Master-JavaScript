@@ -3,7 +3,7 @@ var abj =
 `
 JavaScript is
 <ul><li> HighLevelLanguage</li>
-    <ul><li> Developer has minimal work for setup and evenrything happens automatically through abstractions </li> </ul>
+    <ul><li> Developer has minimal work for setup and everything happens automatically through abstractions </li> </ul>
 <li>has Garbage collection</li>
     <ul><li>JS has garbage collection done automatically. It removes unused ojects from time to time so it doesnt effects the memory clog</li></ul>
 <li>Interpreted or JIT complied</li>

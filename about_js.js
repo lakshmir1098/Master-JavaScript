@@ -21,15 +21,14 @@ JavaScript is
     <li> We can pass functions into another functions are return them from anhter functions
 
 Example,
-    <div class= "code">
-        const model = function(){
-        console.log('I'm called');
-        }
+<div class= "code">
+    const model = function(){
+    console.log('I'm called');
+    }
 
-        btn.addEventListener("clikc",model);
-    <div> </li> 
+    btn.addEventListener("clikc",model); <div> </li> 
     
-    </ul>
+</ul>
 <li> Dynamically typed - We dont define the type of the variable </li>
 <li> Single threaded </li>
     <ul><li> JS is single threaded, so it can do only on thing at a time </li>

@@ -62,3 +62,7 @@ const [a,b,...c] = [1,2,3,4,5,6,7];
 console.log(a,b,c); //1 2 [ 3, 4, 5, 6, 7 ]
 
 
+const ar = [1,5,6,7,5,8,6,9];
+const un = new Set(ar);
+console.log(un);
+console.log([...un]);

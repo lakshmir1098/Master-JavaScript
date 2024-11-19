@@ -106,8 +106,30 @@ const resturant = {
   orders(ing1,ing2){
     return `Pizza is ready with ${ing1} and ${ing2}`;
   },
-
+  owner : {
+  },
 }
 console.log(resturant.openingHours?.sat); 
+
+const me1 = Object.keys(about_me_2);
+const me2 = Object.values(about_me_2);
+const me3 = Object.entries(about_me_2);
+const me4 = Object.assign(resturant.owner, about_me_2);
+const me5 = Object.entries(resturant);
+
+console.log('resturant :')
+for( const i of me5){
+ 
+  console.log(i);
+}
+console.log(me5);
+
+const me6 = Object.entries(resturant.openingHours);
+for ( const [key, {open, close}] of me6) {
+  console.log(`On ${key} we are open for ${open} and closed for ${close}`);
+}
+
+const maps = new Map (Object.entries(resturant.openingHours))
+console.log(maps);
 
 

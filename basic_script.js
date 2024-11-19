@@ -75,13 +75,94 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 `
 document.getElementById ('forof').innerHTML = forof;
+}
+
+function maps (){
+    var maps =
+`
+Map is an key value pair datastructue.
+
+<span class ='sub-sub-head'>&#128640; Creating map </span>
+<span class = 'code'>
+    const maps = new Map([
+        ["a",[1,2,3]],
+        [1, ['a','b','c']]
+    ]);
+
+    maps
+        .set(true, 'You are allowed')
+        .set(false, 'you are not allowed')
+
+    console.log(maps);
+</span>
+<span class ='sub-sub-head'>&#128640; Accessing elements in map </span>
+<span class = 'code'>
+    const maps = new Map();
+
+    maps
+        .set ("a",[1,2,3])
+        .set(1, ['a','b','c'])
+        .set(true, 'You are allowed')
+        .set(false, 'you are not allowed')
+        .set ('lt', 10)
+        .set ('gt', 1)
+
+    console.log( maps.get(1));  //['a','b','c']
+
+    const t = 4;
+    console.log(maps.get( t < maps.get('lt') && t > maps.get('gt'))); // You are allowed
+</span>
+map's length can be found by<span class = "code-word"> maps.size </span>
+map has <span class = "code-word">has</span> property to check if the key is present to return the vaulues.
+
+<span class ='sub-sub-head'>&#128640; Converting objects into Map </span>
+<div class ='code'>
+    const days = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
+    const resturant = {
+        openingHours : {
+            [days[0]] : { //enhanced object literal
+                open : 5,
+                close : 5
+            },
+            [days[1]] : {
+                open :10 ,
+                close :5
+            },
+            [days[2]] : {
+                open :13,
+                close :6
+            },
+            [days[3]]:{
+                open :6,
+                close:10
+            }
+        },
     }
+    const maps = new Map (Object.entries(resturant.openingHours))
+    console.log(maps);
+</div>
+<span class ='sub-sub-head'>&#128640; Converting Map into array </span>
+<div class ='code'>
+    console.log([...maps.get('a')]);
+</div>
+<span class ='sub-sub-head'>&#128640; Accessing Maps </span>
+
+Using <span class ='code-word'> keys, values, entries </span> properties
+<div class ='code'>
+    console.log(maps.entries());
+    console.log(maps.keys());
+    console.log(maps.values())
+</div>
+`
+document.getElementById('maps').innerHTML = maps;
+}
 
     tcandtc();
     torf();
     nullish();
     math_methods();
     forof();
+    maps();
 
 })
 

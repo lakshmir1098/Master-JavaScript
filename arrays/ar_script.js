@@ -74,11 +74,32 @@ With strings
     console.log(...names);
 </div>
 <span class = "sub-head">Rest Operator </span>
+
 The opp. of spread operator with same ...
 SPREAD op. works on right side of = while REST works on left side of =.
 <div class= 'code'>
     const [a,b,...c] = [1,2,3,4,5,6,7];
     console.log(a,b,c); //1 2 [ 3, 4, 5, 6, 7 ]
+</div>
+<span class = 'sub-head' >set and array </span>
+
+We know set is used to remove duplicate elements in any iterables.
+
+Creating new set
+<div class = 'code'>
+    const ar = [1,5,6,7,5,8,6,9];
+    const un = new Set(ar);
+    console.log(un); //Set(6) { 1, 5, 6, 7, 8, 9 }
+</div>
+Length of set is get through method <span class = 'code-word'> size() </span>
+
+<span class ='sub-sub-head'>&#128640;converting set into array </span>
+
+as we can't index set.
+<div  class = 'code'>
+    const ar = [1,5,6,7,5,8,6,9];
+    const un = new Set(ar);
+    console.log([...un]); //[ 1, 5, 6, 7, 8, 9 ]
 </div>
 <span class = "sub-head">Operations in Array </span>
 <ul><li><b>push(element)</b> - takes input - to add elements to the end of the array - returns lenght of the array </li>

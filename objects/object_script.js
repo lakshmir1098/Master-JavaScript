@@ -134,6 +134,131 @@ This will prevent us from errors of undefined <span class = 'code-word'> 'Cannot
     }
     console.log(resturant.openingHours?.sat);   
 </div>
+<span class = 'sub-head'>Looping over objects </span>
+
+We can loop on objects just like how we loop arrays using <span class = 'code-word'> object.keys() / object.values() / object.entries() </span>
+<div class = 'code' >
+    const me1 = Object.keys(about_me_2);
+    const me2 = Object.values(about_me_2);
+    const me3 = Object.entries(about_me_2);
+
+    for( const i of me1){
+        console.log(i);
+    }
+</div>
+
+We can use this Object constructor to assign values from one object to another
+
+//resturant object
+<span class = 'code'>
+    const resturant = {
+        openingHours : {
+            [days[0]] : { //enhanced object literal
+                open : 5,
+                close : 5
+            },
+            [days[1]] : {
+                open :10 ,
+                close :5
+            },
+            [days[2]] : {
+                open :13,
+                close :6
+            },
+            [days[3]]:{
+                open :6,
+                close:10
+            }
+        },
+        orders(ing1,ing2){
+            return \`Pizza is ready with \${ing1} and \${ing2}\`;
+        },
+        owner : {
+        },
+    } 
+</span>
+//output 1
+<span class = 'code'>
+const me4 = Object.assign(resturant.owner, about_me_2);
+const me5 = Object.entries(resturant);
+console.log('resturant:', me5);
+//OUTPUT
+    resturant: 
+    s[
+        [
+            'openingHours',
+            { mon: [Object], tue: [Object], wed: [Object], thur: [Object] } 
+        ],
+        [ 
+            'orders', [Function: orders] 
+        ],
+        [
+            'owner',
+            {
+            my_name: 'Lakshmi',
+            firstName: 'Lakshmi',
+            lastName: 'Ramachandran',
+            occupation: 'Programmer',
+            birthYear: 1998,
+            Hobbies: [Array],
+            location: 'TamilNadu',
+            mail_id: 'lakshmichandran1010@gmail.com',
+            calAge: [Function: calAge],
+            age: 26
+            }
+        ]
+    ]
+</span>
+//output 2
+<span class = 'code'>
+console.log('resturant :')
+for( const i of me5){
+ 
+  console.log(i);
+}
+//OUTPUT
+    resturant :
+    [
+        'openingHours',
+        {
+            mon: { open: 5, close: 5 },
+            tue: { open: 10, close: 5 },
+            wed: { open: 13, close: 6 },
+            thur: { open: 6, close: 10 }
+        }
+    ]
+    [   
+        'orders', [Function: orders] 
+    ]
+    [
+        'owner',
+        {
+            my_name: 'Lakshmi',
+            firstName: 'Lakshmi',
+            lastName: 'Ramachandran',
+            occupation: 'Programmer',
+            birthYear: 1998,
+            Hobbies: [ 'singing', 'dancing', 'coding' ],
+            location: 'TamilNadu',
+            mail_id: 'lakshmichandran1010@gmail.com',
+            calAge: [Function: calAge],
+            age: 26
+        }
+    ]
+</span>
+//output 3
+<span class = 'code'>
+    const me6 = Object.entries(resturant.openingHours);
+    for ( const [key, {open, close}] of me6) {
+        console.log(\`On \${key} we are open for \${open} and closed for \${close}\`);
+    }
+    
+//OUTPUT
+On mon we are open for 5 and closed for 5
+On tue we are open for 10 and closed for 5
+On wed we are open for 13 and closed for 6
+On thur we are open for 6 and closed for 10
+</span>
 `
 document.getElementById("objects").innerHTML = objects;
 })

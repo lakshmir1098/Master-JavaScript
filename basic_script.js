@@ -1,6 +1,6 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function() {
-    function tcandtc (){
+function tcandtc (){
         var tcandtc = `
     Number to String ==> String(23)
     String to Number ==> Number(23)
@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     So, except for + other arthm operation like -,*,/ will perform mathematical operation on string `;
     
         document.getElementById("tcandtc").innerHTML = tcandtc;
-    }
+}
 
-    function torf(){
+function torf(){
         var torf = `
     There are only 6 falsy values in JS. They are: 
         * 0
@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     All othe values are true`;
 
         document.getElementById("torf").innerHTML =  torf;
-    }
+}
 
-    function nullish(){
+function nullish(){
         var nullish = ` 
     Nullish values are null and undefined.
     
@@ -44,18 +44,18 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(num2); //0 as 0 is not nullish number
 </div>`
         document.getElementById("nullish").innerHTML = nullish;
-    }
+}
 
-    function math_methods(){
-        var math_methods = `<ul><li><b>Math.random()</b> -> generates decimal number between 0 and 1.</li>
+function math_methods(){
+var math_methods = `<ul><li><b>Math.random()</b> -> generates decimal number between 0 and 1.</li>
     <li><b>Math.random() * 20 </b>-> generates decimal number between 0 and 19.999 </li>
     <li><b>Math.trunc(Math.random()*20) </b> -> cuts the decimal and rounds the number between 0 and 19 </li>
     <li><b>Math.trunc(Math.random()*20) + 1 </b>-> generates whole number between 1 and 20 </li></ul>`
         document.getElementById("math_methods").innerHTML =  math_methods;
 
-    }
+}
 
-    function forof(){
+function forof(){
         var forof = 
 `<div class = 'code'>
     const add = function(...num){
@@ -71,9 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //    sum = sum + num[i];
     //}
     add(2,3);
-    add(5,6,7,7); 
-</div>
-`
+    add(5,6,7,7); </div>`
 document.getElementById ('forof').innerHTML = forof;
 }
 

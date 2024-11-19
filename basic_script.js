@@ -34,15 +34,15 @@ document.addEventListener('DOMContentLoaded', function() {
     Nullish values are null and undefined.
     
     <span class ='sub-sub-head'>Example </span>
-    <div class = 'code'>
-        const a = 0;
-        const num1 = a || 10;
-        console.log(num1); // 10 as 0 is falsy value
-        //But 
+<div class = 'code'>
+    const a = 0;
+    const num1 = a || 10;
+    console.log(num1); // 10 as 0 is falsy value
+    //But 
 
-        const num2 =  a ?? 10;
-        console.log(num2); //0 as 0 is not nullish number
-    </div>`
+    const num2 =  a ?? 10;
+    console.log(num2); //0 as 0 is not nullish number
+</div>`
         document.getElementById("nullish").innerHTML = nullish;
     }
 
@@ -57,23 +57,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function forof(){
         var forof = 
-    `
-<div class = 'code'>
-        const add = function(...num){
-        let sum = 0;
-        for(const i of num){ //uses of instead of in
-            sum = sum + i;
-        }
-        console.log(sum);
-        }
+`<div class = 'code'>
+    const add = function(...num){
+    let sum = 0;
+    for(const i of num){ //uses of instead of in
+        sum = sum + i;
+    }
+    console.log(sum);
+    }
 
-        //When in is used
-        //for(const i in num){ 
-        //    sum = sum + num[i];
-        //}
-        add(2,3);
-        add(5,6,7,7); 
-    </div>
+    //When in is used
+    //for(const i in num){ 
+    //    sum = sum + num[i];
+    //}
+    add(2,3);
+    add(5,6,7,7); 
+</div>
 `
 document.getElementById ('forof').innerHTML = forof;
     }

@@ -42,8 +42,6 @@ Example,
 Temporal Dead zone. This comes under the mechanism of Hoisting, Where we call a function or variable before declaring them.
 <ul><li> For<span class="code-word"> var</span> returns <span class="code-word">undefined.</span>
 <li> But <span class="code-word">let, const</span> return an error. This is because, the JS reads the code and store them in TDZ until it is intitialized.
-
-
 `
 document.getElementById("abj").innerHTML = abj;
 

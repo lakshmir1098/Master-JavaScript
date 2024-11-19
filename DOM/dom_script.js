@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //OUTPUT "New Value"
         `.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/`/g, " ");
     
-        const click_event_code =`  
+    const click_event_code =`  
     <input type = "number" class="guess"/>
     <button class="click_btn">click</button>
     <p id="result"></p>
@@ -178,15 +178,15 @@ Some of the manipulation properties discussed are :
     <li>This property is used to get or set the text content of an element and all its children</li>
     <li>Returns the content of an element as plain text along with spaces, and doesn't account for styles. 
 It's useful for handling raw text content.</li> 
-    <li><span class= "code-word">textContent</span> applies to text within HTML elements like \`${divTag}\`, \`${spanTag}\`, etc. and 
-it does not work well with form elements like \`${inputTag}\`,\`${selectTag}\` , or \`${textAreaTag}\` .
+    <li><span class= "code-word">textContent</span> applies to text within HTML elements like ${divTag}, ${spanTag}, etc. and 
+it does not work well with form elements like ${inputTag},${selectTag} , or ${textAreaTag} .
 </ul>
 <li><b>document.getElementById("demo").value</b></li>
 <ul>
-    <li>This is used to get or set the current value of an \`${inputTag} element (or other form elements like \`${textAreaTag}\`  and \`${selectTag}\`),
+    <li>This is used to get or set the current value of an ${inputTag} element (or other form elements like ${textAreaTag} and ${selectTag}),
 when you're getting or setting the user's input in a text field, checkbox, radio button, etc. </li>
     <li> When a user types in the input field, the value of the input element updates automatically, and you can access that value using <span class= "code-word">.value</span> </li>
-    <li> The value of an \`${inputTag} element reflects the data entered by the user or the data set in JavaScript, not the HTML content
+    <li> The value of an ${inputTag} element reflects the data entered by the user or the data set in JavaScript, not the HTML content
 </ul>
 <li><b>document.getElementById("demo").innerHTML</b></li>
 <ul>
@@ -194,7 +194,7 @@ when you're getting or setting the user's input in a text field, checkbox, radio
 It recognizes HTML tags and formats the content accordingly. </li>
     <li>InnerHTML is the easiest way to modify the content of an HTML element</li>
     <li>But, be cautious if you're inserting content from user input or any untrusted source with innerHTML. 
-Attackers can use the HTML \`${scriptTag}\` tag to insert and run malicious code in your app</li>
+Attackers can use the HTML ${scriptTag} tag to insert and run malicious code in your app</li>
 </ul>
 <li><b>document.getElementById("demo").innerText</b></li>
 <ul>
@@ -204,60 +204,53 @@ Attackers can use the HTML \`${scriptTag}\` tag to insert and run malicious code
 </ul>
 </ul>
 Let us see how the below code is rendered when used with innerHTML,textContent,innerText
-
-<div class="code">\`${code_1}\`
+<div class="code">${code_1}
 
     const navElement1 = document.querySelector('nav')
     console.log("innerHTML",navElement.innerHTML) 
-    //OUTPUT\`${innerHTML_output}\`
+    //OUTPUT${innerHTML_output}
 
     const navElement2 = document.querySelector('nav')
     console.log("innerText",navElement.innerText)
-    //OUTPUT \`${innerText_output}\`
+    //OUTPUT ${innerText_output}
 
     const navElement3 = document.querySelector('nav')
     console.log("textContent",navElement.textContent)
-    //OUTPUT \`${textContent_output}\`
+    //OUTPUT ${textContent_output}
 
 </div>
 Example for input.value
-<div class= "code">\`${input_value_code}\`
+<div class= "code">${input_value_code}
 </div>
    
 <span class=sub-head>Click Event </span>
 
-    Event Listener in JavaScript is used to listen to any mouse or keyboard clicks or other operations
-    like hover happend over an HTML element.
-
-<div class="code"> \`${click_event_code}\`
+Event Listener in JavaScript is used to listen to any mouse or keyboard clicks or other operations
+like hover happend over an HTML element
+<div class="code"> ${click_event_code}
 </div>
 
 <span class=sub-head>Hiding DOM element using class </span>
     
-    Here we hide HTML element using a class from css. CSS class will be applied to HTML by JS on click of the button.
-    classList has - add, remove, contains, toggle proper
-
-<div class="code"> \`${hide_elem}\`
+Here we hide HTML element using a class from css. CSS class will be applied to HTML by JS on click of the button.
+classList has - add, remove, contains, toggle proper
+<div class="code"> ${hide_elem}
 </div>
-
 
 <span class=sub-head>Capturing Key press event </span>
 
-    Pressing the key in the keyboard can be captured by <span class= "code-word">addEventListener</span> method followed by 
-    <span class= "code-word"> Keydown, keypress, keyup </span> to indicate when the function should be called
-    
-    <span class= "code-word"> Keydown </span> -  when the key is still being pressed and key is down
-    <span class= "code-word"> Keypress </span> -  fired when we continously press the key
-    <span class= "code-word"> Keyup </span> -  when key is pressed and finger is off the keyboard  
-
-    <span class= "code-word">addEventListener</span>  we have used so far is only used to listen to the event. 
-    We never look at the even object that JS generates when an event happens.
-    This object is called <span class= "code-word"><b>keyboardEvent</b></span>.This object has a key param which say which key is pressed.
-
-
-<div class="code"> \`${key_press}\`
+Pressing the key in the keyboard can be captured by <span class= "code-word">addEventListener</span> method followed by 
+<ul><li><span class= "code-word"> Keydown, keypress, keyup </span> to indicate when the function should be called </li>
+<ul>
+<li><span class= "code-word"> Keydown </span> -  when the key is still being pressed and key is down
+<li><span class= "code-word"> Keypress </span> -  fired when we continously press the key
+<li><span class= "code-word"> Keyup </span> -  when key is pressed and finger is off the keyboard  
+</ul>
+<li><span class= "code-word">addEventListener</span>  we have used so far is only used to listen to the event. 
+<li>We never look at the even object that JS generates when an event happens.
+<li>This object is called <span class= "code-word"><b>keyboardEvent</b></span>.This object has a key param which say which key is pressed.</li></ul>
+<div class="code"> ${key_press}
 </div>
-
 <b>NOTE:</b> Executable code is attached as HTML files for practical visual.
 `
    document.getElementById("dom").innerHTML = dom;

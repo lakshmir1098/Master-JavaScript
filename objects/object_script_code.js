@@ -82,3 +82,32 @@ const new_me = {...about_me_2,Profession:'developer'};
 
 console.log(new_me);
 
+// optional chaining ?.
+const days = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
+const resturant = {
+  openingHours : {
+    [days[0]] : { //enhanced object literal
+      open : 5,
+      close : 5
+    },
+    [days[1]] : {
+      open :10 ,
+      close :5
+    },
+    [days[2]] : {
+      open :13,
+      close :6
+    },
+    [days[3]]:{
+      open :6,
+      close:10
+    }
+  },
+  orders(ing1,ing2){
+    return `Pizza is ready with ${ing1} and ${ing2}`;
+  },
+
+}
+console.log(resturant.openingHours?.sat); 
+
+

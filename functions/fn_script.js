@@ -252,8 +252,7 @@ They are used to create private scope in JavaScript, allowing variables and func
 
     //Arrow function IIFE
     (() => console.log("Private Immediately Invoked Function Expressions (IIFE)  for Arrow FUnction"))();
-</div>
-    
+</div> 
 `
     document.getElementById("functions").innerHTML = logfun;
 

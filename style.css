@@ -76,3 +76,7 @@ li{
     letter-spacing: 1px;
     font-style: italic;
 }
+
+.bold{
+    font-weight: bolder;
+}

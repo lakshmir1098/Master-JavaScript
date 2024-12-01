@@ -236,7 +236,6 @@ console.log("New array b:", Array.from({length:4}, () => 4))
 console.log("New array c:",Array.from({length:7}, (_, i) => Math.trunc(Math.random()*100)+1)) 
 //New array c: [21, 64, 52, 11, 95, 69, 49 ]
 </div>
-
 `
     document.getElementById("arrays").innerHTML = arrays;
 });

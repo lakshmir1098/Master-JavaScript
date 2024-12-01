@@ -197,7 +197,7 @@ Other way of defining for this keyword  is .BIND() . This method allows you to e
     //like here for different user on same flight
 </div>
 
-<span class = 'sub-sub-head'>&#128640;Another example for <span  class = 'bold'> call/apply/bind method </span> </span>
+<span class = 'sub-sub-head'>&#128640;Another example for <b> call/apply/bind method </b> </span>
 <ul><li>call attaches this into function and executes the function immediately:
 <div class = 'code'>
     var person = {  

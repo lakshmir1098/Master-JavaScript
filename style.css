@@ -24,6 +24,11 @@ pre{
     display: block;
     text-wrap:wrap;
 }
+
+a{
+    color: #88a0e8;
+}
+
 .subs{
     margin:30px 0 0 0;
 }
@@ -75,8 +80,5 @@ li{
     font-family: 'Monaco',;
     letter-spacing: 1px;
     font-style: italic;
-}
-
-.bold{
-    font-weight: bolder;
+    font-weight: bold;
 }

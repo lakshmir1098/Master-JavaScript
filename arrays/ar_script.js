@@ -101,19 +101,115 @@ as we can't index set.
     const un = new Set(ar);
     console.log([...un]); //[ 1, 5, 6, 7, 8, 9 ]
 </div>
-<span class = "sub-head">Operations in Array </span>
+<span class = "sub-head">Operations / Methods used in Array </span> </i>
+
+<i>Reference :</i> <a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array> Array built-in methods </a>
 <ul><li><b>push(element)</b> - takes input - to add elements to the end of the array - returns lenght of the array </li>
-
 <li><b>unshift(element)</b> - takes input - to add elements in the beginning of the array - returns lenght of the array</li>
-
 <li><b>pop()</b> - opp of push() - no input required - remove last element from array - returns removed element</li>
-
 <li><b>shit()</b> - opp of unshift() - no input required - removes first element from the array - return removed element </li>
-
 <li><b>indexOf(element)</b> - takes input - returns index of an elelment if present else returns -1 </li>
-
 <li><b>includes(element)</b> - takes input - returns true of false based on element present or not. </li>
+<li><b> Slice </b> - Method uses  positive and negative index to return only the elements within the boundry mentioned. This does not affect the original array itself.
+<ul> <li>Slice with 1 param is starting boundry
+<li>slice with 2 param is starting and ending index boundry </li></ul>
 
-    `
+<i> Example</i> 
+<div class = 'code'> 
+Lets take let arra = ['a', 'b', 'c', 'd', 'e'];
+console.log("arra.slice(2)",arra.slice(2));     // [ 'c', 'd', 'e' ]
+console.log("arr after arra.slice(2)",arra);    // [ 'a', 'b', 'c', 'd', 'e' ]
+console.log("arra.slice(-2)",arra.slice(-2));   // [ 'd', 'e' ]
+console.log("arr after arra.slice(-2)",arra);   // [ 'a', 'b', 'c', 'd', 'e' ]
+console.log("arra.slice(2,4)",arra.slice(2, 4));     // [ 'c', 'd' ]
+</div>
+<li><b>splice</b> - this method is same as slice but this affects the original array. When an index is mentioned then the splice deletes the the elements after the boundry from original array itself.
+<ul>
+<li>Slice with 1 param is starting boundry
+<li>slice with 2 param is starting index boundry and no.of elements</li></ul>
+
+<i> Example</i> 
+<div class = 'code'> 
+console.log("arra.splice(2,1)",arra.splice(2,1));  //['c']
+console.log("arra.splice(2)",arra.splice(2));   // [ 'd', 'e' ]
+console.log(" arr after arra.splice(2)",arra);  // [ 'a', 'b' ]
+console.log("arra.slice(-2)",arra.splice(-2));  // [ 'a', 'b' ]
+console.log(" arr after arra.splice(-2)",arra); // []
+</div>
+<li><b>reverse</b> - reverse the elements in the array and this impacts the original array itself
+
+<i> Example</i> 
+<div class = 'code'> 
+let a2 = [1,2,3,4,5];
+console.log("a2.reverse()", a2.reverse())
+console. log( "a2 after reverse ", a2)
+</div>
+<li><b>concat</b> - 2 merge 2 arrays 
+
+<i> Example</i> 
+<div class = 'code'>
+let a3  = [10,20,30]
+let a2 = [5,4,3,2,1];
+let c1 = a3.concat(a2);
+console.log("concat",c1); //[10, 20, 30, 5, 4,  3,  2, 1]
+
+//the other way
+console.log(...a3,...a2); //10 20 30 5 4 3 2 1
+</div>
+<li><b> join </b> - joins array elements into a string using some character or space
+
+<i> Example</i> 
+<div class = 'code'>
+console.log(c1.join('|'))   //10|20|30|1|2|3|4|5
+</div>
+<li><b>at</b> - returns element at the mentioned index .This method replaces basic <span class = 'code-word'>a[0]</span> to <span class = 'code-word'>a.at(0)</span>
+This method is used in string as well
+
+<i>This method is very useful in getting last array element</i> 
+<div class = 'code'>
+//previously we use
+console.log(c1[c1.length-1]);
+console.log(c1.slice(-1)[0]);
+
+// now using at method
+console.log(c1.at(-1))
+</div>
+<li><b>map</b> - map method takes an array,loops over that array and in each alteration, it applies a covic function that we specify on our code to the current array element and creates a new array</span>
+<li><b>filter</b> - used to filter for elements in the original array which satisfy a certain condition and will make it into a new filtered array.
+<li><b>reduce</b> - this method boil down all the elements of the original array into one single value.An example of this can be to add all the elements of an array together
+<li><b>find</b> - used to retrive first element of an array that meets a specified condition.
+<li><b>findIndex</b> - used to retrive the index of the first element of an array that meets a specified condition.
+<li><b>some</b> - return true or false for the elements of an array based on the condition set inside some method. This method is basically used to check for the presence of true condition on the elements of an array 
+
+<i>Example </i>
+<div class = 'code'>
+const ages = [3, 10, 18, 20];
+console.log(ages.some(a => a >= 18)); //true
+</div>
+<li><b>every</b> - returns true only if all the elements in the array pass the given condition as true.
+
+<i> Example </i>
+<div class = 'code'>
+const ages = [3, 10, 18, 20];
+console.log(ages.every(a => a >= 18)); //false
+</div>
+<li><b>flat</b> - a method used in nested arrays/ multi deimensional array to mak into less/single dimensional array.
+This take how much deep the array has to be flatten as input param
+
+<i> Example </i>
+<div class = 'code'>
+const nar = [[1,2],3,[[4,5],6],7,8];
+console.log("1",nar.flat()); //1 [ 1, 2, 3, [ 4, 5 ], 6, 7, 8 ]
+console.log("2",nar.flat(2)) // 2 [1, 2, 3, 4, 5, 6, 7, 8]
+</div>
+<li><b>flatMap</b> - it s  a combination of flat and map methods with flat going deep only to 1 level by default. We cant go down to 2 levels or more as in flat.
+
+<i> Example </i>
+<div class = 'code'>
+const ar1 = [1, 2, 1];
+const result = ar1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+console.log(result);// [1, 2, 2, 1]
+</div>
+`
     document.getElementById("arrays").innerHTML = arrays;
 });

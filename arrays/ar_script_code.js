@@ -66,3 +66,50 @@ const ar = [1,5,6,7,5,8,6,9];
 const un = new Set(ar);
 console.log(un);
 console.log([...un]);
+
+let arra = ['a', 'b', 'c', 'd', 'e'];
+console.log("arra.slice(2)",arra.slice(2));  // [ 'c', 'd', 'e' ]
+console.log("arra.slice(2,4)",arra.slice(2, 4));     // [ 'c', 'd' ]
+console.log("arr after arra.slice(2)",arra);    // [ 'a', 'b', 'c', 'd', 'e' ]
+console.log("arra.slice(-2)",arra.slice(-2));   // [ 'd', 'e' ]
+console.log("arr after arra.slice(-2)",arra);   // [ 'a', 'b', 'c', 'd', 'e' ]
+console.log("arra.splice(2,1)",arra.splice(2,1));  //['c']
+console.log("arra.splice(2)",arra.splice(2));   // [ 'd', 'e' ]
+console.log(" arr after arra.splice(2)",arra);  // [ 'a', 'b' ]
+console.log("arra.slice(-2)",arra.splice(-2));  // [ 'a', 'b' ]
+console.log(" arr after arra.splice(-2)",arra); // []
+
+
+let a2 = [1,2,3,4,5];
+console.log("a2.reverse()", a2.reverse())
+console. log( "a2 after reverse ", a2)
+
+a3  = [10,20,30]
+a2 = a2.reverse();
+let c1 = a3.concat(a2);
+console.log("concat",c1); //[10, 20, 30, 5, 4,  3,  2, 1]
+
+//the other way
+console.log(...a3,...a2); //10 20 30 5 4 3 2 1
+
+
+s = c1.join('|') //10|20|30|1|2|3|4|5
+console.log( typeof(s));
+
+console.log(c1.at(1));
+console.log(c1[c1.length-1]);
+console.log(c1.slice(-1)[0])
+console.log(c1.at(-1))
+
+const nar = [[1,2],3,[[4,5],6],7,8];
+console.log("1",nar.flat());
+console.log("2",nar.flat(2))
+
+const ages = [3, 10, 18, 20];
+console.log(ages.some(a => a >= 18));
+
+console.log(ages.every(a => a >=18))
+
+const ar1 = [1, 2, 1];
+const result = ar1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+console.log(result);// [1, 2, 2, 1]

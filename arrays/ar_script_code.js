@@ -113,3 +113,18 @@ console.log(ages.every(a => a >=18))
 const ar1 = [1, 2, 1];
 const result = ar1.flatMap((num) => (num === 2 ? [2, 2] : 1));
 console.log(result);// [1, 2, 2, 1]
+
+
+const ag = [2,4,6,5,7,3,0,8]
+// default asc order
+console.log("ag",ag.sort()) // ag [ 0, 2, 3, 4, 5, 6, 7, 8 ]
+// asc order
+console.log("ag1", ag.sort((a,b) => a-b)); // ag1 [ 0, 2, 3, 4, 5, 6, 7, 8 ]
+//desc
+console.log("ag2", ag.sort((a,b) => b-a)); // ag2 [ 8, 7, 6, 5, 4, 3, 2, 0 ]
+
+
+console.log("New array a:",Array.from({length:7}, (_, i) => i+1)) // New array a: [1, 2, 3, 4, 5, 6, 7 ]
+console.log("New array b:", Array.from({length:4}, () => 4))  //New array b: [ 4, 4, 4, 4 ]
+console.log("New array c:",Array.from({length:7}, (_, i) => Math.trunc(Math.random()*100)+1)) 
+//New array c: [21, 64, 52, 11, 95, 69, 49 ]

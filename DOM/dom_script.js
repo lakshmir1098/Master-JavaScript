@@ -301,7 +301,8 @@ Pressing the key in the keyboard can be captured by <span class= "code-word">add
 <b>NOTE:</b> Executable code is attached as HTML files for practical visual.
 <br>
 <span class="sub-head">&#128640; How DOM API is organized:</span>
-        <img src="assests/DOM.png" alt="How DOM is organized"/>
+
+<div><img src="assests/DOM.png" alt="How DOM is organized"/></div>
 
 <span class=sub-head>DOM Methods </span>
 

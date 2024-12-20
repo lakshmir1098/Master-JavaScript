@@ -1,6 +1,5 @@
-document.addEventListener('DOMContentLoaded',function(){
-var abj = 
-`
+document.addEventListener("DOMContentLoaded", function () {
+  var abj = `
 JavaScript is
 <ul><li> HighLevelLanguage</li>
     <ul><li> Developer has minimal work for setup and everything happens automatically through abstractions </li> </ul>
@@ -37,11 +36,10 @@ Example,
         <ul> <li> It takes the long running taks, executes them in the background and puts them in the main thread once they are finished </li> </ul>
 </ul></ul>
 
-<span class= "sub-head"> TDZ </span>
+<span class= "sub-head">TDZ </span>
 Temporal Dead zone. This comes under the mechanism of Hoisting, Where we call a function or variable before declaring them.
 <ul><li> For<span class="code-word"> var</span> returns <span class="code-word">undefined.</span>
 <li> But <span class="code-word">let, const</span> return an error. This is because, the JS reads the code and store them in TDZ until it is intitialized.
-`
-document.getElementById("abj").innerHTML = abj;
-
+`;
+  document.getElementById("abj").innerHTML = abj;
 });

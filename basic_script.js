@@ -1,8 +1,8 @@
-'use strict';
-document.addEventListener('DOMContentLoaded', function() {
-function tcandtc (){
-        var tcandtc = `
-    Number to String ==> String(23)
+"use strict";
+document.addEventListener("DOMContentLoaded", function () {
+    function tcandtc() {
+        var tcandtc =
+    `    Number to String ==> String(23)
     String to Number ==> Number(23)
     Like this we can use the into datatype(variable) to do type conversion.
 
@@ -10,30 +10,29 @@ function tcandtc (){
     but '10' - 1 //9 ==> here arithmetci sub operation is performed
 
     So, except for + other arthm operation like -,*,/ will perform mathematical operation on string `;
-    
+
         document.getElementById("tcandtc").innerHTML = tcandtc;
-}
+    }
 
-function torf(){
-        var torf = `
-    There are only 6 falsy values in JS. They are: 
-        * 0
-        * empty string ' '
-        * undefined
-        * null
-        * Nan
-        * False
-        
-    All othe values are true`;
+    function torf() {
+        var torf = 
+        `    There are only 6 falsy values in JS. They are: 
+            * 0
+            * empty string ' '
+            * undefined
+            * null
+            * Nan
+            * False
+            
+        All othe values are true`;
 
-        document.getElementById("torf").innerHTML =  torf;
-}
+        document.getElementById("torf").innerHTML = torf;
+    }
 
-function nullish(){
+    function nullish() {
         var nullish = ` 
     Nullish values are null and undefined.
-    
-    <span class ='sub-sub-head'>Example </span>
+    <i>Example </i>
 <div class = 'code'>
     const a = 0;
     const num1 = a || 10;
@@ -42,22 +41,20 @@ function nullish(){
 
     const num2 =  a ?? 10;
     console.log(num2); //0 as 0 is not nullish number
-</div>`
+</div>`;
         document.getElementById("nullish").innerHTML = nullish;
-}
+    }
 
-function math_methods(){
-var math_methods = `<ul><li><b>Math.random()</b> -> generates decimal number between 0 and 1.</li>
+    function math_methods() {
+        var math_methods = `<ul><li><b>Math.random()</b> -> generates decimal number between 0 and 1.</li>
     <li><b>Math.random() * 20 </b>-> generates decimal number between 0 and 19.999 </li>
     <li><b>Math.trunc(Math.random()*20) </b> -> cuts the decimal and rounds the number between 0 and 19 </li>
-    <li><b>Math.trunc(Math.random()*20) + 1 </b>-> generates whole number between 1 and 20 </li></ul>`
-        document.getElementById("math_methods").innerHTML =  math_methods;
+    <li><b>Math.trunc(Math.random()*20) + 1 </b>-> generates whole number between 1 and 20 </li></ul>`;
+        document.getElementById("math_methods").innerHTML = math_methods;
+    }
 
-}
-
-function forof(){
-        var forof = 
-`<div class = 'code'>
+    function forof() {
+        var forof = `<div class = 'code'>
     const add = function(...num){
     let sum = 0;
     for(const i of num){ //uses of instead of in
@@ -71,17 +68,15 @@ function forof(){
     //    sum = sum + num[i];
     //}
     add(2,3);
-    add(5,6,7,7); </div>`
-document.getElementById ('forof').innerHTML = forof;
-}
+    add(5,6,7,7); </div>`;
+        document.getElementById("forof").innerHTML = forof;
+    }
 
-function maps (){
-    var maps =
-`
-Map is an key value pair datastructue.
-
+    function maps() {
+        var maps = 
+`    Map is an key value pair datastructue.
 <span class ='sub-sub-head'>&#128640; Creating map </span>
-<span class = 'code'>
+<div class = 'code'>
     const maps = new Map([
         ["a",[1,2,3]],
         [1, ['a','b','c']]
@@ -92,9 +87,9 @@ Map is an key value pair datastructue.
         .set(false, 'you are not allowed')
 
     console.log(maps);
-</span>
+</div>
 <span class ='sub-sub-head'>&#128640; Accessing elements in map </span>
-<span class = 'code'>
+<div class = 'code'>
     const maps = new Map();
 
     maps
@@ -109,8 +104,7 @@ Map is an key value pair datastructue.
 
     const t = 4;
     console.log(maps.get( t < maps.get('lt') && t > maps.get('gt'))); // You are allowed
-</span>
-map's length can be found by<span class = "code-word"> maps.size </span>
+</div>map's length can be found by<span class = "code-word"> maps.size </span>
 map has <span class = "code-word">has</span> property to check if the key is present to return the vaulues.
 
 <span class ='sub-sub-head'>&#128640; Converting objects into Map </span>
@@ -144,20 +138,18 @@ map has <span class = "code-word">has</span> property to check if the key is pre
     console.log([...maps.get('a')]);
 </div>
 <span class ='sub-sub-head'>&#128640; Accessing Maps </span>
-
-Using <span class ='code-word'> keys, values, entries </span> properties
+    Using <span class ='code-word'> keys, values, entries </span> properties
 <div class ='code'>
     console.log(maps.entries());
     console.log(maps.keys());
     console.log(maps.values())
 </div>
-`
-document.getElementById('maps').innerHTML = maps;
-}
+`;
+        document.getElementById("maps").innerHTML = maps;
+    }
 
-function dates (){
-var dates =
-`<div class = 'code'>
+    function dates() {
+        var dates = `<div class = 'code'>
     const now = new Date();
     console.log(now);
     //Tue Dec 03 2024 18:32:55 GMT+0530 (India Standard Time)
@@ -213,22 +205,21 @@ var dates =
     //try in dev tool console
     const locale = navigator.language; 
     console.log("locale",locale);
-</div>`
-document.getElementById('dates').innerHTML = dates;
-}
+</div>`;
+        document.getElementById("dates").innerHTML = dates;
+    }
 
-function timers(){
-var timers = 
-`
-   There are 2 timers method:
+    function timers() {
+        var timers = 
+    `    There are 2 timers method:
     1.  setTimeOut -   run once
         clearTimeOut
     2.  setInterval - keeps running until we stop it
         clearInterval
 
-`
-document.getElementById('timers').innerHTML = timers;   
-}
+`;
+        document.getElementById("timers").innerHTML = timers;
+    }
 
     tcandtc();
     torf();
@@ -238,6 +229,4 @@ document.getElementById('timers').innerHTML = timers;
     maps();
     dates();
     timers();
-
-})
-
+});

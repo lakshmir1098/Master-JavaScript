@@ -216,9 +216,9 @@ document.addEventListener("DOMContentLoaded", function () {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
 
-  var dom = `<ul><li> DOM is the complete representation of the HTML file so that we can manipulate it later.</li>
-    <li> The DOM Methods and Properties for DOM Manipulation such as "document.querySelector()" are not part of JavaScript.</li>
-    <li> Well, DOM and DOM Methods are actually part of WebAPIs</ul>
+  var dom = `<ul><li>DOM is the complete representation of the HTML file so that we can manipulate it later.</li>
+    <li>The DOM Methods and Properties for DOM Manipulation such as "document.querySelector()" are not part of JavaScript.</li>
+    <li>Well, DOM and DOM Methods are actually part of WebAPIs</li></ul>
 Some of the manipulation properties discussed are :
 <ul><li><b>document.getElementById("demo").textContent</b></li>
 <ul>
@@ -266,44 +266,33 @@ Let us see how the below code is rendered when used with innerHTML,textContent,i
     //OUTPUT ${textContent_output}
 
 </div>
-Example for input.value
+<i>Example</i> for input.value
 <div class= "code">${input_value_code}
 </div>
-   
 <span class=sub-head>Click Event </span>
-
-Event Listener in JavaScript is used to listen to any mouse or keyboard clicks or other operations
-like hover happend over an HTML element
+    Event Listener in JavaScript is used to listen to any mouse or keyboard clicks or other operations like hover happend over an HTML element
 <div class="code"> ${click_event_code}
 </div>
-
 <span class=sub-head>Hiding DOM element using class </span>
-    
-Here we hide HTML element using a class from css. CSS class will be applied to HTML by JS on click of the button.
+    Here we hide HTML element using a class from css. CSS class will be applied to HTML by JS on click of the button.
 classList has - add, remove, contains, toggle proper
 <div class="code"> ${hide_elem}
 </div>
-
 <span class=sub-head>Capturing Key press event </span>
-
 Pressing the key in the keyboard can be captured by <span class= "code-word">addEventListener</span> method followed by 
 <ul><li><span class= "code-word"> Keydown, keypress, keyup </span> to indicate when the function should be called </li>
-<ul>
-<li><span class= "code-word"> Keydown </span> -  when the key is still being pressed and key is down
+<ul><li><span class= "code-word"> Keydown </span> -  when the key is still being pressed and key is down
 <li><span class= "code-word"> Keypress </span> -  fired when we continously press the key
 <li><span class= "code-word"> Keyup </span> -  when key is pressed and finger is off the keyboard  
 </ul>
 <li><span class= "code-word">addEventListener</span>  we have used so far is only used to listen to the event. 
 <li>We never look at the even object that JS generates when an event happens.
-<li>This object is called <span class= "code-word"><b>keyboardEvent</b></span>.This object has a key param which say which key is pressed.</li></ul>
-<div class="code"> ${key_press}
-</div>
-<b>NOTE:</b> Executable code is attached as HTML files for practical visual.
-<br>
-<span class="sub-head">&#128640; How DOM API is organized:</span>
+<li>This object is called <span class= "code-word"><b>keyboardEvent</b></span>.This object has a key param which say which key is pressed.</li></ul><div class="code"> ${key_press}
+</div><i><b>NOTE:</b> Executable code is attached as HTML files for practical visual.</i>
+
+<span class="sub-head">How DOM API is organized:</span>
 
 <div><img src="assests/DOM.png" alt="How DOM is organized"/></div>
-
 <span class=sub-head>DOM Methods </span>
 
 <span class="sub-sub-head">&#128640; Selecting Elements </span>
@@ -312,21 +301,21 @@ Pressing the key in the keyboard can be captured by <span class= "code-word">add
 <li> Return the header elm of the document
 <div class="code-one-line">console.log(document.head); </div></li>
 <li>Return body elm of the document
-<div class="code-one-line">console.log(document.body);  
+<div class="code-one-line">console.log(document.body);  </div></li>
 <li>Returns 1st found class of the given name
-<div class="code-one-line">console.log(document.querySelector('.subs').innerHTML); 
+<div class="code-one-line">console.log(document.querySelector('.subs').innerHTML); </div></li>
 <li>Return NodeList of all the class found for the givne class name
-<div class="code-one-line">console.log(document.querySelectorAll('.subs'));
+<div class="code-one-line">console.log(document.querySelectorAll('.subs')); </div></li>
 <li>Returns list of all the class found for the given class name
 <div class="code-one-line">const subs = document.querySelectorAll('.subs');
-subs.forEach((e) => console.log(e.innerHTML)); 
+subs.forEach((e) => console.log(e.innerHTML)); </div></li>
 <li> Returns HTML Collections of all the tags  
-<div class="code-one-line">console.log(document.getElementsByTagName('div'));
+<div class="code-one-line">console.log(document.getElementsByTagName('div'));</div></li>
 <li> Return HTML Colletion of all the class 
-<div class="code-one-line">console.log(document.getElementsByClassName('sub-sub-head'));
+<div class="code-one-line">console.log(document.getElementsByClassName('sub-sub-head'));</div></li>
 <li> Returns node list when the name attr is given for input tag 
 <div class="code-one-line">console.log(document.getElementsByName('div'))
-</ul>
+</div></li></ul>
 <span class="sub-sub-head">&#128640; Creating Elements </span>
 <ul><li> Using createElement <div class="code">
 const msg = document.createElement("div"); // create div element
@@ -344,7 +333,87 @@ ${insertAdjEl}
 <div class="code"> ${delEl1}
 </div></li>
 <li> Deleting multiple elements at the same time on button click
-<div class="code"> ${delEl2}
-</div></li></ul>`;
+<div class="code">${delEl2}
+</div></li></ul>
+<span class="sub-sub-head">&#128640; Styling Elements </span>
+<ul><li><div class="code-one-line">msg.style.height = "10px";
+console.log(msg.style.height);
+</div></li>
+<li>The computed style is the style used on the element after all styling sources have been applied
+To know when style is not defined by us e.g.,height
+<div class="code">
+console.log(getComputedStyle(msg).height); // 10px
+msg.style.height = Number.parseFloat(getComputedStyle(msg).height) + 16 + "px"; 
+// can be used to change the style
+
+console.log(getComputedStyle(msg).height); //26px
+console.log(msg.style.height); //26px
+</div></li>
+<li>setProperty 
+<div class="code-one-line">msg.style.setProperty("color", "rgb(55, 247, 247)"); 
+</div></li></ul>
+<span class="sub-sub-head">&#128640; Finding Co-ordinates</span>
+<div><img src="assests/coordinates.png" alt="Co-ordinates of elements"/></div>
+<ul><li><b>getBoundingClientRect</b> - Returns a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width.
+The left, top, right, bottom, x, y, width, and height properties describe the position and size of the overall rectangle in pixels.
+<i>Note: top = y and left = x</i>
+<div class="code">
+console.log(msg.getBoundingClientRect());
+
+// OUPUT:
+{
+    "x": 20,
+    "y": 871.9896240234375,
+    "width": 531.6666870117188,
+    "height": 26,
+    "top": 871.9896240234375,
+    "right": 551.6666870117188,
+    "bottom": 897.9896240234375,
+    "left": 20
+}
+</div></li>
+<li> Current scroll position - basically works on button
+<div class="code">
+    document.querySelectorAll(".select").addEventListener("click", () => {
+        console.log( window.scrollX, window.scrollY)
+        });
+    // OUTPUT
+    0 36760
+</div></li>
+<li> scrollTo - says, on button click where the page should go
+<div class = 'code'>
+    document.querySelectorAll(".select").forEach((i) => {
+        i.addEventListener("click", () => {
+        window.scrollTo(0, 500);
+        });
+    });
+<div></li></ul>
+<span class="sub-sub-head">&#128640; Height/ Width of an element</span>
+<ul><li> <b>clientHeight</b> - returns the inner height of an element in pixels, including padding but not the horizontal scrollbar height, border, or margin</li>
+<li> <b>offsetHeight </b> - is a measurement which includes the element borders, the element vertical padding, the element horizontal scrollbar (if present, if rendered) and the element CSS height.</li>
+<li> <b> scrollHeight</b> - is a measurement of the height of an element's content including content not visible on the screen due to overflow </li></ul><div class = 'code'>
+    document.querySelectorAll(".select").forEach((i) => {
+        i.addEventListener("click", () => {
+            console.log(document.documentElement.clientHeight);  //561
+            console.log(document.documentElement.clientWidth); //353
+            console.log(document.documentElement.scrollHeight); // 37479
+        
+        });
+    });
+</div> 
+<div class = 'code'>
+    document.querySelectorAll(".select").forEach((i) => {
+        i.addEventListener("click", () => {
+            window.scrollTo({
+                left:0, 
+                top: 832,
+                behavior: "smooth", // [options : auto, instant, smooth]
+            });
+        });
+
+    });
+</div>
+`;
+
   document.getElementById("dom").innerHTML = dom;
 });

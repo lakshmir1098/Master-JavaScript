@@ -81,11 +81,9 @@ Meaning if,<span class="code-word"> this</span> keyword is used in arrow functio
     add(...x); //14
 </div>
 <span class = "sub-head">Default parameter</span>
-
 We can provide default values for  the params passed to teh function in case if they are not defined on function call.
 This feature is introduces from ES6 version
 How can we do that? Here is an example
-
 <div class ='code'>
     const sum = function (a=1, b=1){
         return a + b;
@@ -93,9 +91,7 @@ How can we do that? Here is an example
     console.log(sum());
 </div>
 <span class = 'sub-head'>Call back Function </span>
-
 Function calling another fucntion is callled callback function. The calling function is called Higher-order function.
-
 <div class =  'code'>
     function oneWord (s) {
         return s.replace(/ /g, '').toLowerCase();
@@ -109,7 +105,6 @@ Function calling another fucntion is callled callback function. The calling func
     transform("I'm learning JS", oneWord);
 </div>
 <span class = 'sub-head'>Function returning functions </span>
-
 <div class = 'code'>
     function greet (gr){
         return function (name){
@@ -129,11 +124,11 @@ For arrow function
 <span class = 'sub-head'>Methods to borrow functions inside an object by another object </span>
 
 <span class = 'sub-sub-head'>&#128640; CALL method </span>
-
 Call method for a fucntion is udef when we have more then one function calling the same method 
 for different purpose and that method has <span class = 'code-word'> this </span> keyword to refer to the paramenters.
 
 In this case, while we have multiple function call a method, <span class = 'code-word'> this </span> keyword dont know which function to point and result in error.
+
 To avoid this we use call method on the method.
 <div class = 'code'>
     travellingme ={
@@ -163,7 +158,6 @@ To avoid this we use call method on the method.
     console.log("other",travellingOther);
 </div>  
 <span class = 'sub-sub-head'>&#128640; BIND method</span>
-
 Other way of defining for this keyword  is .BIND() . This method allows you to explicitly set 2nd object to the calling method in 1st object.
 <div class = 'code'>
     travellingme ={
@@ -196,8 +190,7 @@ Other way of defining for this keyword  is .BIND() . This method allows you to e
     bookOther78('Sara'); // with bind we can use bookOther78 multimple times 
     //like here for different user on same flight
 </div>
-
-<span class = 'sub-sub-head'>&#128640;Another example for <b> call/apply/bind method </b> </span>
+    <i>Another example for <b> call/apply/bind method </b> </i>
 <ul><li>call attaches this into function and executes the function immediately:
 <div class = 'code'>
     var person = {  
@@ -208,8 +201,8 @@ Other way of defining for this keyword  is .BIND() . This method allows you to e
     }
     person.hello("world");  // output: "James Smith says hello world"
     person.hello.call({ name: "Jim Smith" }, "world"); // output: "Jim Smith says hello world"
-</div> </li>
-<li> bind attaches this into function and it needs to be invoked separately like this:
+</div></li>
+<li>bind attaches this into function and it needs to be invoked separately like this:
 <div class = 'code'>
 var person = {  
   name: "James Smith",
@@ -226,8 +219,7 @@ or like this:
     
 var helloFunc = person.hello.bind({ name: "Jim Smith" }, "world");
 helloFunc();  // output: Jim Smith says hello world"
-</div>
-</li>
+</div></li>
 <li>apply is similar to call except that it takes an array-like object instead of listing the arguments out one at a time:
 <div class = 'code'>
 function personContainer() {
@@ -242,7 +234,6 @@ function personContainer() {
 personContainer("world", "mars"); // output: "James Smith says hello mars", note: arguments[0] = "world" , arguments[1] = "mars" 
 </div></li></ul>
 <span class = 'sub-head'>Immediately Invoked Function Expressions (IIFE) </span>
-
 Functions that are executed immediately after they are defined. They are typically used to create a local scope for variables to prevent them from polluting the global scope.
 They are used to create private scope in JavaScript, allowing variables and functions to be encapsulated and inaccessible from outside the function.
 <div class = 'code'>
@@ -252,8 +243,7 @@ They are used to create private scope in JavaScript, allowing variables and func
 
     //Arrow function IIFE
     (() => console.log("Private Immediately Invoked Function Expressions (IIFE)  for Arrow FUnction"))();
-</div> 
-`
+</div>`
     document.getElementById("functions").innerHTML = logfun;
 
 })

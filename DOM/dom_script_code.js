@@ -48,5 +48,90 @@ document.querySelectorAll(".select").forEach((i) => {
   i.addEventListener("click", () => {
     msg.remove(); // Remove the message
     msg1.remove(); // Remove the buttons
+    console.log( window.scrollX, window.scrollY)
   });
+});
+
+msg.style.height = "10px";
+console.log(msg.style.height);
+//The computed style is the style used on the element after all styling sources have been applied
+console.log(getComputedStyle(msg).height); // to know when style is not defined by us e.g.,height
+
+msg.style.height = Number.parseFloat(getComputedStyle(msg).height) + 16 + "px"; // can be used to change the style
+console.log(getComputedStyle(msg).height);
+console.log(msg.style.height);
+
+msg.style.setProperty("color", "rgb(55, 247, 247)");
+
+
+// Returns a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width.
+// The left, top, right, bottom, x, y, width, and height properties describe the position and size of the overall rectangle in pixels.
+// Note: top = y and left = x
+console.log(msg.getBoundingClientRect());
+
+/** OUPUT:
+{
+    "x": 20,
+    "y": 871.9896240234375,
+    "width": 531.6666870117188,
+    "height": 26,
+    "top": 871.9896240234375,
+    "right": 551.6666870117188,
+    "bottom": 897.9896240234375,
+    "left": 20
+}
+ */
+
+
+// current scroll position
+
+document.querySelectorAll(".select").forEach((i) => {
+    i.addEventListener("click", () => {
+      console.log( window.scrollX, window.scrollY);
+      // 0 36918.66796875
+    });
+});
+// OUTPUT
+// 0 36760
+
+
+// srollTo
+document.querySelectorAll(".select").forEach((i) => {
+    i.addEventListener("click", () => {
+      window.scrollTo(0, 500);
+    });
+});
+
+
+document.querySelectorAll(".select").forEach((i) => {
+    i.addEventListener("click", () => {
+        window.scrollTo({
+            left:0, 
+            top: 28750,
+            behavior: "smooth", // [options : auto, instant, smooth]
+        });
+    });
+
+});
+
+
+/** To know the difference you have to understand the box model, but basically:
+
+clientHeight:
+returns the inner height of an element in pixels, including padding but not the horizontal scrollbar height, border, or margin
+
+offsetHeight:
+is a measurement which includes the element borders, the element vertical padding, the element horizontal scrollbar (if present, if rendered) and the element CSS height.
+
+scrollHeight:
+is a measurement of the height of an element's content including content not visible on the screen due to overflow 
+*/
+
+document.querySelectorAll(".select").forEach((i) => {
+    i.addEventListener("click", () => {
+      console.log(document.documentElement.clientHeight);  //561
+      console.log(document.documentElement.clientWidth); //353
+      console.log(document.documentElement.scrollHeight); // 37479
+      
+    });
 });

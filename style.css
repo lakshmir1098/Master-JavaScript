@@ -1,84 +1,116 @@
-h6 span{
-    font-weight: lighter;
+h6 span {
+  font-weight: lighter;
 }
-body{
-    font-family: Georgia ;
-    line-height: 1em;
-    color: rgb(247, 241, 241);
-    margin: 10px 5px 5px 20px;
-    background-color: black;
+body {
+  font-family: Georgia;
+  line-height: 1em;
+  color: rgb(247, 241, 241);
+  margin: 10px 5px 5px 20px;
+  background-color: black;
 }
 
 body .heading5 {
-    color: #88a0e8;
-    font-size: 20px;
-    font-weight: bold;
-    margin:10px 0 0 0;
-    padding: 10px 0 0 0;
-    margin-block: 0 0;
+  color: #88a0e8;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  padding: 10px 0 0 0;
+  margin-block: 0 0;
 }
 
-pre{
-    margin: 1px 10px 1px 10px;
-    font-family: garamond;
-    display: block;
-    text-wrap:wrap;
+pre {
+  margin: 1px 10px 1px 10px;
+  font-family: garamond;
+  display: block;
+  text-wrap: wrap;
 }
 
-a{
-    color: #88a0e8;
+a {
+  color: #88a0e8;
 }
 
-.subs{
-    margin:30px 0 0 0;
+.subs {
+  margin: 30px 0 0 0;
 }
 
-.sub-head{
-    font-weight: bolder;
-    font-style: italic;
-    font-size: larger;
-    margin: -20px 0 -100px 0;
-    padding: -20px 0 -30px 0;
+.sub-head {
+  font-weight: bolder;
+  font-style: italic;
+  font-size: larger;
+  margin: -20px 0 -100px 0;
+  padding: -20px 0 -30px 0;
 }
-.sub-sub-head{
-    font-style: italic;
-}
-
-ul{
-    line-height: 5%;
+.sub-sub-head {
+  font-style: italic;
 }
 
-li{
-    padding: 0;
-    line-height: 1;
-    margin: 10px 0 -5px 0;
+ul {
+  line-height: 5%;
 }
 
-.code{
-    font-family: 'Monaco',;
-    letter-spacing: 1px;
-    font-size: 13px;
-    font-weight: bold;
-    color: #bc73f4;
-    border: 1px groove rgb(222, 212, 212);
-    border-radius: 10px ;
-    line-height: 130%;
-    padding: 0px 10px 20px 10px;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    text-wrap:nowrap;
-    overflow: scroll;
-    scrollbar-width:none;
+li {
+  padding: 0;
+  line-height: 1;
+  margin: 10px 0 -5px 0;
+}
+
+.code {
+  font-family: "Monaco";
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #bc73f4;
+  border: 1px groove rgb(222, 212, 212);
+  border-radius: 10px;
+  line-height: 130%;
+  padding: 0px 10px 20px 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.code-one-line {
+  font-family: "Monaco";
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #bc73f4;
+  padding: 5px;
+  margin: 1px;
 }
 
 .example {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.code-word{
-    font-family: 'Monaco',;
-    letter-spacing: 1px;
-    font-style: italic;
-    font-weight: bold;
+.code-word {
+  font-family: "Monaco";
+  letter-spacing: 1px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.cookie-msg {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: rgb(32, 24, 24);
+  color: #2de260;
+  font-size: 1em;
+}
+.cookie-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.select {
+  width: 20%;
+  background-color: #2de260;
+  color: rgb(32, 24, 24);
 }

@@ -31,3 +31,25 @@ const time_set = date.getTime()
 console.log("q",time_set); // to set a timeset which can be further used to get the exact date //1734242400000
 console.log("r",new Date (time_set)); //2024-12-15T06:00:00.000Z
 console.log("s",Date.now()) //1733328886925
+
+//Internalization of Dates
+const now1 = new Date();
+const options = { // without this Intl.DateTimeFormat will only show date and this gives us lot of options on how to display
+  hour: 'numeric',
+  minute: 'numeric',
+  day: 'numeric',
+  month: 'numeric',
+  year: 'numeric',
+  weekday: 'short',
+};
+
+console.log(new Intl.DateTimeFormat(
+  'en-IN',
+  options
+).format(now1));
+
+// this is to get local machine time,but works only on browser side not on vs code. 
+//try in dev tool console
+const locale = navigator.language; 
+console.log("locale",locale);
+

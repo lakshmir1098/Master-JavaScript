@@ -1,47 +1,57 @@
-document.addEventListener('DOMContentLoaded', function() {
-    
-    const inputTag = "<input>".replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const divTag = `<div>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const spanTag = `<span>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const selectTag = `<select>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const textAreaTag = `<textarea>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const scriptTag = '<script>'.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const code_1 = `
+document.addEventListener("DOMContentLoaded", function () {
+  const inputTag = "<input>".replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const divTag = `<div>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const spanTag = `<span>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const selectTag = `<select>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const textAreaTag = `<textarea>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const scriptTag = "<script>".replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const code_1 = `
     <nav>
         <a>Home</a>
         <a>About</a>
         <a>Contact</a>
         <a style="display: none">Pricing</a>
-    </nav>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    
-    const innerHTML_output =` 
+    </nav>`
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  const innerHTML_output = ` 
     <a>Home</a>
     <a>About</a>
     <a>Contact</a>
-    <a style="display: none">Pricing</a>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    
-    const innerText_output = `
-     Home About Contact`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    
-     const textContent_output = `
+    <a style="display: none">Pricing</a>`
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  const innerText_output = `
+     Home About Contact`
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  const textContent_output = `
     Home
     About
     Contact
-    Pricing`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    
-    const input_value_code = `
-        <input type="text" id="myInput" value="Hello, World!">
-        
-        // Getting the value of the input
-        console.log(document.getElementById('myInput').value); 
-        //OUTPUT "Hello, World!"
-        
-        // Setting a new value to the input
-        document.getElementById('myInput').value = "New Value";
-        //OUTPUT "New Value"
-        `.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/`/g, " ");
-    
-    const click_event_code =`  
+    Pricing`
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  const input_value_code = `
+    <input type="text" id="myInput" value="Hello, World!">
+
+    // Getting the value of the input
+    console.log(document.getElementById('myInput').value); 
+    //OUTPUT "Hello, World!"
+
+    // Setting a new value to the input
+    document.getElementById('myInput').value = "New Value";
+    //OUTPUT "New Value"
+    `
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/`/g, " ");
+
+  const click_event_code = `  
     <input type = "number" class="guess"/>
     <button class="click_btn">click</button>
     <p id="result"></p>
@@ -54,9 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(typeof number_typed); // OUTPUT -> string, number
         document.getElementById('result').innerText = number_typed;
     })
-        `.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        `
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 
-    const hide_elem =`
+  const hide_elem = `
     <html>
         <div class="block "> </div>
         <button class = "btn-hide">Click to hide</button>
@@ -122,9 +134,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
         
-    </script>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    </script>`
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 
-    const key_press = `
+  const key_press = `
     <html>
         <body>
         Click ESC to see a change
@@ -166,10 +180,43 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
         })
-    </script>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    </script>`
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 
+  const insertAdjEl = `const msg1 = document.createElement("div");
+    msg1.classList.add("cookie-btn");
+    msg1.innerHTML = "<button class = 'select'> Accept </button> <button class = 'select'> Ignore </button>";
+    msg.insertAdjacentElement("afterend", msg1);`
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 
-    var dom =`<ul><li> DOM is the complete representation of the HTML file so that we can manipulate it later.</li>
+  const delEl1 = `document.querySelector(".accept").
+    addEventListener("click", function () {
+        msg.remove(); // Remove the message
+        msg1.remove(); // Remove the buttons
+    });
+
+    document.querySelector(".ignore").
+    addEventListener("click", function () {
+        msg.remove();
+        msg1.remove();
+    });`
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  const delEl2 = `
+    document.querySelectorAll(".select").
+    forEach((i) => {
+        i.addEventListener("click", function () {
+            msg.remove(); // Remove the message
+            msg1.remove(); // Remove the buttons
+        });
+    });`
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  var dom = `<ul><li> DOM is the complete representation of the HTML file so that we can manipulate it later.</li>
     <li> The DOM Methods and Properties for DOM Manipulation such as "document.querySelector()" are not part of JavaScript.</li>
     <li> Well, DOM and DOM Methods are actually part of WebAPIs</ul>
 Some of the manipulation properties discussed are :
@@ -252,6 +299,51 @@ Pressing the key in the keyboard can be captured by <span class= "code-word">add
 <div class="code"> ${key_press}
 </div>
 <b>NOTE:</b> Executable code is attached as HTML files for practical visual.
-`
-   document.getElementById("dom").innerHTML = dom;
-})
+<br>
+<span class="sub-head">&#128640; How DOM API is organized:</span>
+        <img src="assests/DOM.png" alt="How DOM is organized"/>
+
+<span class=sub-head>DOM Methods </span>
+
+<span class="sub-sub-head">&#128640; Selecting Elements </span>
+<ul><li>brings entire HTMl elements of the page
+<div class="code-one-line">console.log(document.documentElement);</div></li>
+<li> Return the header elm of the document
+<div class="code-one-line">console.log(document.head); </div></li>
+<li>Return body elm of the document
+<div class="code-one-line">console.log(document.body);  
+<li>Returns 1st found class of the given name
+<div class="code-one-line">console.log(document.querySelector('.subs').innerHTML); 
+<li>Return NodeList of all the class found for the givne class name
+<div class="code-one-line">console.log(document.querySelectorAll('.subs'));
+<li>Returns list of all the class found for the given class name
+<div class="code-one-line">const subs = document.querySelectorAll('.subs');
+subs.forEach((e) => console.log(e.innerHTML)); 
+<li> Returns HTML Collections of all the tags  
+<div class="code-one-line">console.log(document.getElementsByTagName('div'));
+<li> Return HTML Colletion of all the class 
+<div class="code-one-line">console.log(document.getElementsByClassName('sub-sub-head'));
+<li> Returns node list when the name attr is given for input tag 
+<div class="code-one-line">console.log(document.getElementsByName('div'))
+</ul>
+<span class="sub-sub-head">&#128640; Creating Elements </span>
+<ul><li> Using createElement <div class="code">
+const msg = document.createElement("div"); // create div element
+msg.classList.add("cookie-msg"); // providing class name for the element
+msg.innerHTML = "We use cookies 🍪🤣. Please Agreee! "; // text and other child elements as innnerHTML
+const dom = document.body; // where the element to be placed
+dom.prepend(msg); // at the begining of the element mentioned (here, body)
+dom.append(msg); // at the end of the element mentioned (here, body)
+</div></li>
+<li> Using insertAdjacentElement <div class="code">
+${insertAdjEl}
+</div></li> </ul>
+<span class="sub-sub-head">&#128640; Deleting Elements </span>
+<ul><li> deleting each element on button click
+<div class="code"> ${delEl1}
+</div></li>
+<li> Deleting multiple elements at the same time on button click
+<div class="code"> ${delEl2}
+</div></li></ul>`;
+  document.getElementById("dom").innerHTML = dom;
+});

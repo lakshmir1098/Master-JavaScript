@@ -17,7 +17,7 @@ JavaScript is
 <li>Prototype-based onject-oriented</li>
     <ul><li> Everything in JS are objects except for primitive types. Even arrays are objects! in JS</li></ul>
 <li> First class functions</li>
-    <ul><li> Means, functions are treated as variablee in JS. Not all programming lanaguages allows this.</li>
+    <ul><li> Means, functions are treated as variable in JS. Not all programming lanaguages allows this.</li>
     <li> We can pass functions into another functions are return them from anhter functions
 
 Example,

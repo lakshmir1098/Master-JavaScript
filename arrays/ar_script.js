@@ -220,7 +220,7 @@ console.log("ag",ag.sort()) // ag [ 0, 2, 3, 4, 5, 6, 7, 8 ]
 // asc order
 console.log("ag1", ag.sort((a,b) => a-b)); // ag1 [ 0, 2, 3, 4, 5, 6, 7, 8 ]
 //desc
-conso>le.log("ag2", ag.sort((a,b) => b-a)); // ag2 [ 8, 7, 6, 5, 4, 3, 2, 0 ]
+console.log("ag2", ag.sort((a,b) => b-a)); // ag2 [ 8, 7, 6, 5, 4, 3, 2, 0 ]
 </div>
 
 <span class = "sub-head">Creating Array programatically</span>

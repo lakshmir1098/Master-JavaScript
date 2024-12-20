@@ -23,9 +23,9 @@ console.log(document.getElementsByName("div")); // Returns node list when the na
 const msg = document.createElement("div"); // create div element
 msg.classList.add("cookie-msg"); // providing class name for the element
 msg.innerHTML = "We use cookies 🍪🤣. Please Agreee! "; // text and other child elements as innnerHTML
-const dom = document.body; // where the element to be placed
-dom.prepend(msg); // at the begining of the element mentioned (here, body)
-dom.append(msg); // at the end of the element mentioned (here, body)
+const domb = document.body; // where the element to be placed
+domb.prepend(msg); // at the begining of the element mentioned (here, body)
+domb.append(msg); // at the end of the element mentioned (here, body)
 
 const msg1 = document.createElement("div");
 msg1.classList.add("cookie-btn");
@@ -102,12 +102,15 @@ document.querySelectorAll(".select").forEach((i) => {
     });
 });
 
+const dom =  document.querySelector('#dom');
+console.log(dom.getBoundingClientRect());
+console.log(dom.clientHeight); 
 
 document.querySelectorAll(".select").forEach((i) => {
     i.addEventListener("click", () => {
         window.scrollTo({
             left:0, 
-            top: 28750,
+            top: 22870,
             behavior: "smooth", // [options : auto, instant, smooth]
         });
     });

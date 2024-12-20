@@ -216,6 +216,25 @@ document.addEventListener("DOMContentLoaded", function () {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
 
+  const mouse_event = `
+    <h1> Hey </h1>
+    const dom = document.querySelector('h1');
+
+    const event  = function (e){
+        alert('Yay! you are active');
+    }
+    // similar to hover 
+    dom.addEventListener('mouseenter', event);
+
+    dom.onmouseenter =  function(e){
+        alert('Yay! you are active');
+    }
+
+    // applicable only when the event is added from addEventListener
+    setTimeout (() => dom.removeEventListener('mouseenter', event), 3000);`
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
   var dom = `<ul><li>DOM is the complete representation of the HTML file so that we can manipulate it later.</li>
     <li>The DOM Methods and Properties for DOM Manipulation such as "document.querySelector()" are not part of JavaScript.</li>
     <li>Well, DOM and DOM Methods are actually part of WebAPIs</li></ul>
@@ -290,6 +309,9 @@ Pressing the key in the keyboard can be captured by <span class= "code-word">add
 <li>This object is called <span class= "code-word"><b>keyboardEvent</b></span>.This object has a key param which say which key is pressed.</li></ul><div class="code"> ${key_press}
 </div><i><b>NOTE:</b> Executable code is attached as HTML files for practical visual.</i>
 
+<span class=sub-head>Capturing Mouse press event </span>
+Capture mouse click events using  <span class= "code-word"> addEventListener('mouseenter', event) </span> and  <span class= "code-word"> onmouseenter </span>
+<div class = 'code'>  ${mouse_event} </div>  
 <span class="sub-head">How DOM API is organized:</span>
 
 <div><img src="assests/DOM.png" alt="How DOM is organized"/></div>

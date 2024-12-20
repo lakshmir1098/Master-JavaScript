@@ -1,0 +1,42 @@
+<html>
+  <body>
+    <h1>Hey</h1>
+  </body>
+</html>
+
+<style>
+  body {
+    background: rgb(238, 174, 202);
+    background: linear-gradient(
+      90deg,
+      rgba(238, 174, 202, 1) 0%,
+      rgba(148, 187, 233, 1) 100%
+    );
+  }
+
+  div {
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    padding: 3px 10px;
+    border-width: 5px black;
+  }
+</style>
+
+<script>
+  const dom = document.querySelector("h1");
+
+  const event = function (e) {
+    alert("Yay! you are active");
+  };
+  // similar to hover
+  dom.addEventListener("mouseenter", event);
+
+  dom.onmouseenter = event;
+
+  // applicable only when the event is added from addEventListener
+  setTimeout(() => dom.removeEventListener("mouseenter", event), 3000);
+</script>

@@ -30,25 +30,25 @@ domb.append(msg); // at the end of the element mentioned (here, body)
 const msg1 = document.createElement("div");
 msg1.classList.add("cookie-btn");
 msg1.innerHTML =
-  "<button class = 'select'> Accept </button> <button class = 'select'> Ignore </button>";
+  "<button class = 'select accept'> Accept </button> <button class = 'select ignore'> Ignore </button>";
 msg.insertAdjacentElement("afterend", msg1);
 
 // deleting element from DOM
-// document.querySelector(".accept").addEventListener("click", function () {
-//   msg.remove(); // Remove the message
-//   msg1.remove(); // Remove the buttons
-// });
+document.querySelector(".accept").addEventListener("click", function () {
+  msg.remove(); // Remove the message
+  msg1.remove(); // Remove the buttons
+});
 
-// document.querySelector(".ignore").addEventListener("click", function () {
-//   msg.remove();
-//   msg1.remove();
-// });
+document.querySelector(".ignore").addEventListener("click", function () {
+  msg.remove();
+  msg1.remove();
+});
 
 document.querySelectorAll(".select").forEach((i) => {
   i.addEventListener("click", () => {
     msg.remove(); // Remove the message
     msg1.remove(); // Remove the buttons
-    console.log( window.scrollX, window.scrollY)
+    console.log(window.scrollX, window.scrollY);
   });
 });
 
@@ -62,7 +62,6 @@ console.log(getComputedStyle(msg).height);
 console.log(msg.style.height);
 
 msg.style.setProperty("color", "rgb(55, 247, 247)");
-
 
 // Returns a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width.
 // The left, top, right, bottom, x, y, width, and height properties describe the position and size of the overall rectangle in pixels.
@@ -82,41 +81,51 @@ console.log(msg.getBoundingClientRect());
 }
  */
 
-
 // current scroll position
 
 document.querySelectorAll(".select").forEach((i) => {
-    i.addEventListener("click", () => {
-      console.log( window.scrollX, window.scrollY);
-      // 0 36918.66796875
-    });
+  i.addEventListener("click", () => {
+    console.log(window.scrollX, window.scrollY);
+    // 0 36918.66796875
+  });
 });
 // OUTPUT
 // 0 36760
 
-
 // srollTo
 document.querySelectorAll(".select").forEach((i) => {
-    i.addEventListener("click", () => {
-      window.scrollTo(0, 500);
-    });
+  i.addEventListener("click", () => {
+    window.scrollTo(0, 500);
+  });
 });
 
-const dom =  document.querySelector('#dom');
-console.log(dom.getBoundingClientRect());
-console.log(dom.clientHeight); 
+let dom = document.querySelector("#dom_content");
+document.addEventListener("click", function (event) {
+  // Get the element under the click position
+  const clickedElement = document.elementFromPoint(
+    event.clientX,
+    event.clientY
+  );
 
-document.querySelectorAll(".select").forEach((i) => {
-    i.addEventListener("click", () => {
-        window.scrollTo({
-            left:0, 
-            top: 22870,
-            behavior: "smooth", // [options : auto, instant, smooth]
-        });
-    });
-
+  // Get the bounding rectangle of that element
+  console.log(
+    "Bounding Rect:",
+    clickedElement.getBoundingClientRect().top + window.scrollY // to get size from top of the page
+  );
 });
 
+// this will scroll the page to DOM when I click Accept
+document.querySelector(".accept").addEventListener("click", (e) => {
+  window.scrollTo(0, dom.getBoundingClientRect().top + window.scrollY);
+});
+
+document.querySelector(".ignore").addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "instant", // [options : auto, instant, smooth]
+  });
+  console.log("igbore");
+});
 
 /** To know the difference you have to understand the box model, but basically:
 
@@ -131,12 +140,11 @@ is a measurement of the height of an element's content including content not vis
 */
 
 document.querySelectorAll(".select").forEach((i) => {
-    i.addEventListener("click", () => {
-      console.log(document.documentElement.clientHeight);  //561
-      console.log(document.documentElement.clientWidth); //353
-      console.log(document.documentElement.scrollHeight); // 37479
-      
-    });
+  i.addEventListener("click", () => {
+    console.log(document.documentElement.clientHeight); //561
+    console.log(document.documentElement.clientWidth); //353
+    console.log(document.documentElement.scrollHeight); // 37479
+  });
 });
 
-
+window.addEventListener("click", () => console.log(window.scrollY));

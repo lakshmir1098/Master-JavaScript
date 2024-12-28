@@ -1,0 +1,69 @@
+<html>
+  <body>
+    <div class="container">
+      <div class="block"></div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .hidden {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  .show {
+    opacity: 1;
+    transform: translate3d(10px);
+  }
+  .container {
+    margin: 50px 10px 10px 10px;
+  }
+</style>
+
+<script>
+  const randomInt = (min, max) =>
+    Math.floor(Math.random() * (max - min + 1) + min);
+  const randomColor = () =>
+    `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+
+  // Create new blocks and observe them
+
+  function loadNew() {
+    const container = document.querySelector(".container");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("show", entry.isIntersecting);
+        });
+      },
+      { threshold: 1 }
+    );
+
+    for (let i = 0; i < 100; i++) {
+      const block = document.createElement("div");
+      block.classList.add("hidden");
+      block.textContent = `I'm block ${i + 1}`;
+      block.style.cssText = `
+        background-color: ${randomColor()};
+        padding: 10px;
+        margin: 30px;
+        border: 1px groove rgb(30, 12, 29);
+        border-radius: 10px;
+        letter-spacing: 3px;
+        width: 150px;
+        color : white;
+      `;
+      observer.observe(block);
+      container.append(block);
+    }
+  }
+
+  // Observe the last block to trigger loading new ones
+  const lastBlockObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) loadNew();
+  });
+
+  // Start by observing the first set of blocks and loading more as needed
+  lastBlockObserver.observe(document.querySelector(".block:last-child"));
+  loadNew();
+</script>

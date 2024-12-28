@@ -1,42 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const inputTag = "<input>".replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  const divTag = `<div>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  const spanTag = `<span>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  const selectTag = `<select>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  const textAreaTag = `<textarea>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  const scriptTag = "<script>".replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  const code_1 = `
+    const inputTag = "<input>".replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const divTag = `<div>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const spanTag = `<span>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const selectTag = `<select>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const textAreaTag = `<textarea>`.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const scriptTag = "<script>".replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const code_1 = `
     <nav>
         <a>Home</a>
         <a>About</a>
         <a>Contact</a>
         <a style="display: none">Pricing</a>
     </nav>`
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
-  const innerHTML_output = ` 
+    const innerHTML_output = ` 
     <a>Home</a>
     <a>About</a>
     <a>Contact</a>
     <a style="display: none">Pricing</a>`
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
-  const innerText_output = `
+    const innerText_output = `
      Home About Contact`
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
-  const textContent_output = `
+    const textContent_output = `
     Home
     About
     Contact
     Pricing`
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
-  const input_value_code = `
+    const input_value_code = `
     <input type="text" id="myInput" value="Hello, World!">
 
     // Getting the value of the input
@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('myInput').value = "New Value";
     //OUTPUT "New Value"
     `
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/`/g, " ");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/`/g, " ");
 
-  const click_event_code = `  
+    const click_event_code = `  
     <input type = "number" class="guess"/>
     <button class="click_btn">click</button>
     <p id="result"></p>
@@ -65,10 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('result').innerText = number_typed;
     })
         `
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
-  const hide_elem = `
+    const hide_elem = `
     <html>
         <div class="block "> </div>
         <button class = "btn-hide">Click to hide</button>
@@ -135,10 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         
     </script>`
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
-  const key_press = `
+    const key_press = `
     <html>
         <body>
         Click ESC to see a change
@@ -181,17 +181,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         })
     </script>`
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
-  const insertAdjEl = `const msg1 = document.createElement("div");
+    const insertAdjEl = `const msg1 = document.createElement("div");
     msg1.classList.add("cookie-btn");
     msg1.innerHTML = "<button class = 'select'> Accept </button> <button class = 'select'> Ignore </button>";
     msg.insertAdjacentElement("afterend", msg1);`
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
-  const delEl1 = `document.querySelector(".accept").
+    const delEl1 = `document.querySelector(".accept").
     addEventListener("click", function () {
         msg.remove(); // Remove the message
         msg1.remove(); // Remove the buttons
@@ -202,10 +202,10 @@ document.addEventListener("DOMContentLoaded", function () {
         msg.remove();
         msg1.remove();
     });`
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
-  const delEl2 = `
+    const delEl2 = `
     document.querySelectorAll(".select").
     forEach((i) => {
         i.addEventListener("click", function () {
@@ -213,10 +213,10 @@ document.addEventListener("DOMContentLoaded", function () {
             msg1.remove(); // Remove the buttons
         });
     });`
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
-  const mouse_event = `
+    const mouse_event = `
     <h1> Hey </h1>
     const dom = document.querySelector('h1');
 
@@ -232,10 +232,82 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // applicable only when the event is added from addEventListener
     setTimeout (() => dom.removeEventListener('mouseenter', event), 3000);`
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
 
-  var dom = `<ul><li>DOM is the complete representation of the HTML file so that we can manipulate it later.</li>
+    const interactionObsAPI = `
+    <html>
+        <body>
+            <div class="container">
+                <div class="block"></div>
+            </div>
+        </body>
+    </html>
+
+    <style>
+        .hidden {
+            opacity: 0;
+            transform: translateX(0px);
+        }
+        .show {
+            opacity: 1;
+            transform: translate3d(10px);
+        }
+        .container {
+            margin: 50px 10px 10px 10px;
+        }
+    </style>
+
+    <script>
+        const randomInt = (min, max) =>
+            Math.floor(Math.random() * (max - min + 1) + min);
+        const randomColor = () =>
+            \`rgb(\${randomInt(0, 255)},\${randomInt(0, 255)},\${randomInt(0, 255)})\`;
+
+        // Create new blocks and observe them
+        function loadNew() {
+            const container = document.querySelector(".container");
+            const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                entry.target.classList.toggle("show", entry.isIntersecting);
+                });
+            },
+            { threshold: 1 }
+            );
+
+            for (let i = 0; i < 100; i++) {
+                const block = document.createElement("div");
+                block.classList.add("hidden");
+                block.textContent = \`I'm block \${i + 1}\`;
+                block.style.cssText = \`
+                    background-color: \${randomColor()};
+                    padding: 10px;
+                    margin: 30px;
+                    border: 1px groove rgb(30, 12, 29);
+                    border-radius: 10px;
+                    letter-spacing: 3px;
+                    width: 150px;
+                    color : white;
+                    \`;
+                observer.observe(block);
+                container.append(block);
+            }
+        }
+
+        // Observe the last block to trigger loading new ones
+        const lastBlockObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) loadNew();
+        });
+
+        // Start by observing the first set of blocks and loading more as needed
+        lastBlockObserver.observe(document.querySelector(".block:last-child"));
+        loadNew();
+    </script>`
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+
+    var dom = `<ul><li>DOM is the complete representation of the HTML file so that we can manipulate it later.</li>
     <li>The DOM Methods and Properties for DOM Manipulation such as "document.querySelector()" are not part of JavaScript.</li>
     <li>Well, DOM and DOM Methods are actually part of WebAPIs</li></ul>
 Some of the manipulation properties discussed are :
@@ -375,7 +447,7 @@ console.log(msg.style.height); //26px
 <div class="code-one-line">msg.style.setProperty("color", "rgb(55, 247, 247)"); 
 </div></li></ul>
 <span class="sub-sub-head">&#128640; Finding Co-ordinates</span>
-<div><img src="assests/coordinates.png" alt="Co-ordinates of elements"/></div>
+<div><img  src="assests/coordinates.png" alt="Co-ordinates of elements"/></div>
 <ul><li><b>getBoundingClientRect</b> - Returns a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width.
 The left, top, right, bottom, x, y, width, and height properties describe the position and size of the overall rectangle in pixels.
 <i>Note: top = y and left = x</i>
@@ -435,7 +507,71 @@ console.log(msg.getBoundingClientRect());
 
     });
 </div>
+<span class=sub-head>Event Delegation Technique </span>
+Event Delegation is used to avoid adding events to 1000's of elements at the same time. Cause it creats copies of all 1000 events and slow down the page load
+So, what we do?
+* Add EventListener to common parent element of all the links we are targetting.
+* Determine which elemnt triggered the event
+
+Without Event Delegation technique:
+<div class = 'code'>
+document.querySelectorAll('.nav__link').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      const id = this.getAttribute('href');
+      console.log(id);
+      document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</div>
+With Event Delegation
+<div class = 'code'>
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // Matching strategy
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
+</div>
+
+To get the height  from the top of the page to the place where an user clicked 
+<div class =' code'>
+document.addEventListener("click", function (event) {
+  // Get the element under the click position
+  const clickedElement = document.elementFromPoint(
+    event.clientX,
+    event.clientY
+  );
+
+  // Get the bounding rectangle of that element
+  console.log(
+    "Bounding Rect:",
+    clickedElement.getBoundingClientRect().top + window.scrollY // to get size from top of the page
+  );
+});
+</div>
+<span class=sub-head>Intersection Observer API </span>
+Intersection Observer is an API that is used to detect the interaction of a target element with its’s ancestor element or the document viewport. For example, if we want to detect if some element is visible in the viewport.
+
+use cases of Intersection Observer are:
+* Lazy loading images.
+* Detect if an element is in the viewport or not.
+* Auto-play a video if in the viewport, otherwise pause the video.
+* Infinite scrolling.
+* Sticky Navigation bar
+
+This API has 2 inputs:
+* A callback function  - contains list of elements to be observed and  <span class = 'code-word'> isIntersecting </span> property of the elment decides if the target is visible or not.
+*  An object with <span class = 'code-word'> root, threshold and rootMargin </span> properties.
+        **  root - says the ancestor of the target element as viewport, and if not specified then document viewport is the default value.
+        ** threshold - can be a number or an array of numbers ranging from 0 to 1. It is used to tell how much of the target element should be visible when the above callback function gets triggered.
+        ** rootMargin - used to grow or shrink the  viewport.  if rootMargin is 20px the viewport will be 20px larger so once the target element is 20px from being within the viewport it will be considered intersecting.
+<div class = 'code'> ${interactionObsAPI}
+</div>
 `;
 
-  document.getElementById("dom").innerHTML = dom;
+    document.getElementById("dom").innerHTML = dom;
 });

@@ -57,7 +57,7 @@ li {
   margin: 10px 0 -5px 0;
 }
 
-b{
+b {
   font-weight: bolder;
   font-size: larger;
 }
@@ -113,7 +113,7 @@ b{
 .cookie-btn {
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -122,4 +122,8 @@ b{
   word-spacing: 10%;
   background-color: #2de260;
   color: rgb(32, 24, 24);
+}
+
+.lzy-img {
+  filter: blur(20px);
 }

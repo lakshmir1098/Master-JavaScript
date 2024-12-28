@@ -30,12 +30,12 @@
   const dom = document.querySelector("h1");
 
   const event = function (e) {
-    alert("Yay! you are active");
+    alert("Yay! you are active 🏃‍♂️");
   };
   // similar to hover
   dom.addEventListener("mouseenter", event);
 
-  dom.onmouseenter = event;
+  //dom.onmouseenter = event;
 
   // applicable only when the event is added from addEventListener
   setTimeout(() => dom.removeEventListener("mouseenter", event), 3000);

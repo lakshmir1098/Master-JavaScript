@@ -127,3 +127,8 @@ b {
 .lzy-img {
   filter: blur(20px);
 }
+
+.callout {
+  width: 10px;
+  height: 10px;
+}

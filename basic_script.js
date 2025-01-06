@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     function tcandtc() {
         var tcandtc =
-    `    Number to String ==> String(23)
+            `    Number to String ==> String(23)
     String to Number ==> Number(23)
     Like this we can use the into datatype(variable) to do type conversion.
 
@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function torf() {
-        var torf = 
-        `    There are only 6 falsy values in JS. They are: 
+        var torf =
+            `    There are only 6 falsy values in JS. They are: 
             * 0
             * empty string ' '
             * undefined
@@ -73,8 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function maps() {
-        var maps = 
-`    Map is an key value pair datastructue.
+        var maps =
+            `    Map is an key value pair datastructue.
 <span class ='sub-sub-head'>&#128640; Creating map </span>
 <div class = 'code'>
     const maps = new Map([
@@ -184,7 +184,7 @@ map has <span class = "code-word">has</span> property to check if the key is pre
     console.log("r",new Date (time_set)); //2024-12-15T06:00:00.000Z
     console.log("s",Date.now()) //1733328886925
 </div>
-<span class ='sub-sub-head'>&#128640;Internalization of Dates </span>
+<span class ='sub-sub-head'>   Internalization of Dates </span>
 <div class = 'code'>
     const now1 = new Date();
     const options = { // without this Intl.DateTimeFormat will only show date and this gives us lot of options on how to display
@@ -209,15 +209,21 @@ map has <span class = "code-word">has</span> property to check if the key is pre
         document.getElementById("dates").innerHTML = dates;
     }
 
-    function timers() {
-        var timers = 
-    `    There are 2 timers method:
-    1.  setTimeOut -   run once
-        clearTimeOut
-    2.  setInterval - keeps running until we stop it
-        clearInterval
 
-`;
+    function da() {
+        var da = `<div><img src="assests/defer_async.png" alt="regular vs differ vs async" ></div>`;
+
+        document.getElementById("da").innerHTML = da;
+    }
+
+    function timers() {
+        var timers =
+            `  There are 2 timers method:
+        1.  setTimeOut - run once
+        clearTimeOut
+        2.  setInterval - keeps running until we stop it
+        clearInterval
+            `;
         document.getElementById("timers").innerHTML = timers;
     }
 
@@ -228,5 +234,6 @@ map has <span class = "code-word">has</span> property to check if the key is pre
     forof();
     maps();
     dates();
+    da();
     timers();
 });

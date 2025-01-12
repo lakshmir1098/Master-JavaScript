@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
     var oop =
         `<b> 1. How OOP works in JavaScript? </b>
 - JavaScript is a prototype-based language. Meaning, objects are linked to a prototype object.

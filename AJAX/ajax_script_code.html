@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <title>Old ajax call</title>
+  </head>
+  <body>
+    <h1>Country Information</h1>
+    <div class="countries"></div>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    background-color: #232323;
+  }
+
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui;
+    color: white;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    padding: 10px;
+  }
+
+  .countries {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 2rem;
+    transition: opacity 1s;
+  }
+
+  .country-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .country {
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .country__img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .country__name {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .country__row {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  .country__row span {
+    margin-right: 5px;
+  }
+
+  .neighbour {
+    transform: scale(0.9);
+    margin-left: 0;
+    opacity: 0.9;
+  }
+
+  .neighbour::before {
+    content: "Neighbour country";
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    top: -4rem;
+
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #888;
+  }
+</style>
+
+<script>
+  const getCountryData = function (data, className = "") {
+    return `
+    <article class="country ${className}">
+      <h3 class="country__name">${data.name.official}</h3>
+      <img class="country__img" src="${data.flags[0]}" />
+      <div class="country__data">
+        <h4 class="country__region">${data.region}</h4>
+        <p class="country__row"><span>👫</span>${(
+          +data.population / 1000000
+        ).toFixed(1)} million people</p>
+        <p class="country__row"><span>🗣️</span>${Object.values(
+          data.languages
+        ).join(", ")}</p>
+        <p class="country__row"><span>💰</span>${Object.values(data.currencies)
+          .map((currency) => currency.name)
+          .join(", ")}</p>
+      </div>
+    </article>
+  `;
+  };
+
+  const getCountryandNeighbour = function (country) {
+    const request = new XMLHttpRequest();
+    request.open("GET", `https://restcountries.com/v3/name/${country}`);
+    request.send();
+
+    request.addEventListener("load", function () {
+      const [data] = JSON.parse(this.responseText);
+      const countryHtml = getCountryData(data);
+
+      const [neighbour] = data.borders || [];
+      if (!neighbour) return;
+
+      const request1 = new XMLHttpRequest();
+      request1.open("GET", `https://restcountries.com/v3/alpha/${neighbour}`);
+      request1.send();
+
+      request1.addEventListener("load", function () {
+        const [neighbourData] = JSON.parse(this.responseText);
+        const neighbourHtml = getCountryData(neighbourData, "neighbour");
+
+        document
+          .querySelector(".countries")
+          .insertAdjacentHTML(
+            "beforeend",
+            `<div class="country-row">${countryHtml}${neighbourHtml}</div>`
+          );
+      });
+    });
+  };
+
+  getCountryandNeighbour("portugal");
+  getCountryandNeighbour("canada");
+</script>

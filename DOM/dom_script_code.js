@@ -52,7 +52,7 @@ document.querySelectorAll(".select").forEach((i) => {
   });
 });
 
-msg.style.height = "10px";
+msg.style.height = "20px";
 console.log(msg.style.height);
 //The computed style is the style used on the element after all styling sources have been applied
 console.log(getComputedStyle(msg).height); // to know when style is not defined by us e.g.,height

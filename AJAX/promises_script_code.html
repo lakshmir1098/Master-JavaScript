@@ -167,3 +167,15 @@
   getCountry("gfd");
   getCountry("australia");
 </script>
+
+<script>
+  const num = new Promise((resolve, reject) => {
+    if (Math.random() >= 0.5) {
+      resolve("won"); // fulfilled promise
+    } else {
+      reject(new Error("lost")); // rejected promise
+    }
+  });
+
+  num.then((res) => console.log(res)).catch((err) => console.error(err));
+</script>

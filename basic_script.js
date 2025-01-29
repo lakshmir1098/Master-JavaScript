@@ -1,8 +1,7 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", function () {
-    function tcandtc() {
-        var tcandtc =
-            `    Number to String ==> String(23)
+  function tcandtc() {
+    var tcandtc = `    Number to String ==> String(23)
     String to Number ==> Number(23)
     Like this we can use the into datatype(variable) to do type conversion.
 
@@ -11,12 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     So, except for + other arthm operation like -,*,/ will perform mathematical operation on string `;
 
-        document.getElementById("tcandtc").innerHTML = tcandtc;
-    }
+    document.getElementById("tcandtc").innerHTML = tcandtc;
+  }
 
-    function torf() {
-        var torf =
-            `    There are only 6 falsy values in JS. They are: 
+  function torf() {
+    var torf = `    There are only 6 falsy values in JS. They are: 
             * 0
             * empty string ' '
             * undefined
@@ -26,11 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
             
         All othe values are true`;
 
-        document.getElementById("torf").innerHTML = torf;
-    }
+    document.getElementById("torf").innerHTML = torf;
+  }
 
-    function nullish() {
-        var nullish = ` 
+  function nullish() {
+    var nullish = ` 
     Nullish values are null and undefined.
     <i>Example </i>
 <div class = 'code'>
@@ -42,19 +40,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const num2 =  a ?? 10;
     console.log(num2); //0 as 0 is not nullish number
 </div>`;
-        document.getElementById("nullish").innerHTML = nullish;
-    }
+    document.getElementById("nullish").innerHTML = nullish;
+  }
 
-    function math_methods() {
-        var math_methods = `<ul><li><b>Math.random()</b> -> generates decimal number between 0 and 1.</li>
+  function math_methods() {
+    var math_methods = `<ul><li><b>Math.random()</b> -> generates decimal number between 0 and 1.</li>
     <li><b>Math.random() * 20 </b>-> generates decimal number between 0 and 19.999 </li>
     <li><b>Math.trunc(Math.random()*20) </b> -> cuts the decimal and rounds the number between 0 and 19 </li>
     <li><b>Math.trunc(Math.random()*20) + 1 </b>-> generates whole number between 1 and 20 </li></ul>`;
-        document.getElementById("math_methods").innerHTML = math_methods;
-    }
+    document.getElementById("math_methods").innerHTML = math_methods;
+  }
 
-    function forof() {
-        var forof = `<div class = 'code'>
+  function forof() {
+    var forof = `<div class = 'code'>
     const add = function(...num){
     let sum = 0;
     for(const i of num){ //uses of instead of in
@@ -69,12 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
     //}
     add(2,3);
     add(5,6,7,7); </div>`;
-        document.getElementById("forof").innerHTML = forof;
-    }
+    document.getElementById("forof").innerHTML = forof;
+  }
 
-    function maps() {
-        var maps =
-            `    Map is an key value pair datastructue.
+  function maps() {
+    var maps = `    Map is an key value pair datastructue.
 <span class ='sub-sub-head'>&#128640; Creating map </span>
 <div class = 'code'>
     const maps = new Map([
@@ -145,11 +142,11 @@ map has <span class = "code-word">has</span> property to check if the key is pre
     console.log(maps.values())
 </div>
 `;
-        document.getElementById("maps").innerHTML = maps;
-    }
+    document.getElementById("maps").innerHTML = maps;
+  }
 
-    function dates() {
-        var dates = `<div class = 'code'>
+  function dates() {
+    var dates = `<div class = 'code'>
     const now = new Date();
     console.log(now);
     //Tue Dec 03 2024 18:32:55 GMT+0530 (India Standard Time)
@@ -206,34 +203,56 @@ map has <span class = "code-word">has</span> property to check if the key is pre
     const locale = navigator.language; 
     console.log("locale",locale);
 </div>`;
-        document.getElementById("dates").innerHTML = dates;
-    }
+    document.getElementById("dates").innerHTML = dates;
+  }
 
+  function da() {
+    var da = `<div><img src="assests/defer_async.png" alt="regular vs differ vs async" ></div>`;
 
-    function da() {
-        var da = `<div><img src="assests/defer_async.png" alt="regular vs differ vs async" ></div>`;
+    document.getElementById("da").innerHTML = da;
+  }
 
-        document.getElementById("da").innerHTML = da;
-    }
-
-    function timers() {
-        var timers =
-            `  There are 2 timers method:
+  function timers() {
+    var timers = `  There are 2 timers method:
         1.  setTimeOut - run once
         clearTimeOut
         2.  setInterval - keeps running until we stop it
-        clearInterval
-            `;
-        document.getElementById("timers").innerHTML = timers;
-    }
+        clearInterval`;
+    document.getElementById("timers").innerHTML = timers;
+  }
 
-    tcandtc();
-    torf();
-    nullish();
-    math_methods();
-    forof();
-    maps();
-    dates();
-    da();
-    timers();
+  function bundelling() {
+    var bundle = ` Bundelling is a process of combining multiple files into a single file. This is done to reduce the number of requests made to the server and to reduce the size of the file.
+        The bundeled folder with the name  "dist" is created and can be used as production ready by running <span class = 'code-one-line'>npx parcel index.html</span> or equivalent as per package.json to run a server .
+        
+        Pre-requisite:
+        1. Install node.js
+        2. Install npm
+        3. Install parcel - <span class = 'code-one-line'>npm i parcel</span>
+
+Run parcel on project folder on index.html file. <span class = 'code-one-line'>npx parcel index.html</span>
+We can later change the running command in package.json file as added in our project. So the command we use now to bundle in this project is <span class = 'code-one-line'>npm run start</span>`;
+    document.getElementById("bundelling").innerHTML = bundle;
+  }
+
+  function polyfill() {
+    var polyfill = `A polyfill in JavaScript is a script that adds modern features to older browsers that do not natively support them. For example, Promises introduced in ES6 and so old browser dont support them.
+For that we have to install core-js <span class = 'code-one-line' >npm i code-js </span>
+Yet pollyfilling is not applied to async function. So polyfill asyc function we have to install regenerator-runtime <span class = 'code-one-line' >npm i regenerator-runtime </span>
+    `;
+
+    document.getElementById("polyfill").innerHTML = polyfill;
+  }
+
+  tcandtc();
+  torf();
+  nullish();
+  math_methods();
+  forof();
+  maps();
+  dates();
+  da();
+  timers();
+  bundelling();
+  polyfill();
 });

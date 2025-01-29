@@ -206,9 +206,28 @@ map has <span class = "code-word">has</span> property to check if the key is pre
         1.  setTimeOut - run once
         clearTimeOut
         2.  setInterval - keeps running until we stop it
-        clearInterval
-            `;
+        clearInterval`;
         document.getElementById("timers").innerHTML = timers;
+    }
+    function bundelling() {
+        var bundle = ` Bundelling is a process of combining multiple files into a single file. This is done to reduce the number of requests made to the server and to reduce the size of the file.
+        The bundeled folder with the name  "dist" is created and can be used as production ready by running <span class = 'code-one-line'>npx parcel index.html</span> or equivalent as per package.json to run a server .
+        
+        Pre-requisite:
+        1. Install node.js
+        2. Install npm
+        3. Install parcel - <span class = 'code-one-line'>npm i parcel</span>
+
+Run parcel on project folder on index.html file. <span class = 'code-one-line'>npx parcel index.html</span>
+We can later change the running command in package.json file as added in our project. So the command we use now to bundle in this project is <span class = 'code-one-line'>npm run start</span>`;
+        document.getElementById("bundelling").innerHTML = bundle;
+    }
+    function polyfill() {
+        var polyfill = `A polyfill in JavaScript is a script that adds modern features to older browsers that do not natively support them. For example, Promises introduced in ES6 and so old browser dont support them.
+For that we have to install core-js <span class = 'code-one-line' >npm i code-js </span>
+Yet pollyfilling is not applied to async function. So polyfill asyc function we have to install regenerator-runtime <span class = 'code-one-line' >npm i regenerator-runtime </span>
+    `;
+        document.getElementById("polyfill").innerHTML = polyfill;
     }
     tcandtc();
     torf();
@@ -219,6 +238,8 @@ map has <span class = "code-word">has</span> property to check if the key is pre
     dates();
     da();
     timers();
+    bundelling();
+    polyfill();
 });
 
 //# sourceMappingURL=index.f3d3a4e8.js.map

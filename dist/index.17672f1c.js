@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"eh7RU":[function(require,module,exports,__globalThis) {
+})({"ddQtA":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -635,7 +635,7 @@ const getLastPost = async ()=>{
 };
 console.log("Only last post", await getLastPost());
 
-},{"./module_script_code_1.js":"Ze8mE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Ze8mE":[function(require,module,exports,__globalThis) {
+},{"./module_script_code_1.js":"Ze8mE","@parcel/transformer-js/src/esmodule-helpers.js":"k686k"}],"Ze8mE":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addToCart", ()=>addToCart);
@@ -672,7 +672,7 @@ const num1 = 10;
 const num2 = 20;
 console.log("Module Script Code 1 is executed");
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"k686k"}],"k686k":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -702,6 +702,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["eh7RU","2IFQ6"], "2IFQ6", "parcelRequire94c2")
+},{}]},["ddQtA","2IFQ6"], "2IFQ6", "parcelRequire94c2")
 
 //# sourceMappingURL=index.17672f1c.js.map
